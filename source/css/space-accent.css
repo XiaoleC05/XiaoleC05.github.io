@@ -1,0 +1,8 @@
+/* 浅色主站下的深空氛围点缀，不改变主题结构 */
+body {
+  background-attachment: fixed;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(30, 64, 175, 0.12), transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.08), transparent 42%),
+    radial-gradient(circle at 10% 80%, rgba(99, 102, 241, 0.06), transparent 40%);
+}

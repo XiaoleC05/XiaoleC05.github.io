@@ -4,8 +4,8 @@
 
 # Site
 title: ChenXiaole
-subtitle: '个人网页测试'
-description: '个人网页测试描述'
+subtitle: '技术 · 随笔 · 作品集'
+description: '陈晓乐的个人站点：技术笔记、生活随笔与项目展示。'
 keywords: '陈晓乐，个人网页，测试，chenxiaole'
 author: 陈晓乐
 language: zh-CN
@@ -44,17 +44,10 @@ render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
-highlight:
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+# 由 Fluid 主题统一处理代码高亮与复制按钮，此处关闭 Hexo 自带高亮避免重复
+syntax_highlighter: false
 prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+  enable: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -97,7 +90,23 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: fluid
+
+# hexo-generator-search（与 Fluid 内置搜索配合，仅索引标题以减轻体积）
+search:
+  path: local-search.xml
+  field: post
+  content: false
+
+# hexo-generator-feed（RSS / Atom 订阅）
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: false
+  order_by: -date
+  autodiscovery: true
 
 # Deployment
 ## 静态站点推送到 page，与 GitHub Pages 发布分支一致；Settings → Pages 选 Branch: page / (root)
