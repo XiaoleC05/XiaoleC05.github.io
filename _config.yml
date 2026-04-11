@@ -12,9 +12,9 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## Gitee Pages：在仓库「服务 → Gitee Pages」里开启后，以页面里显示的访问地址为准；常见为 https://chenxiaole.gitee.io
-url: https://chenxiaole.gitee.io
-root: /
+## Gitee：子域名为「登录用户名」小写，不是仓库名里的 ChenXiaole。仓库为 XiaoleC/ChenXiaole.gitee.io 时，一般为项目页 https://xiaolec.gitee.io/ChenXiaole.gitee.io/（以 Pages 成功页里「访问地址」为准）
+url: https://xiaolec.gitee.io
+root: /ChenXiaole.gitee.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
