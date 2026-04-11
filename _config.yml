@@ -109,9 +109,9 @@ feed:
   autodiscovery: true
 
 # Deployment
-## 静态站点推送到 page，与 GitHub Pages 发布分支一致；Settings → Pages 选 Branch: page / (root)
+## 静态站点推送到 page；HTTPS 若频繁 Connection reset 可改用下方 SSH（需本机已配置 github.com 的 SSH 密钥）
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/XiaoleC05/XiaoleC05.github.io.git
+  repo: git@github.com:XiaoleC05/XiaoleC05.github.io.git
   branch: page
