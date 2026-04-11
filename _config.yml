@@ -100,9 +100,9 @@ ignore:
 theme: landscape
 
 # Deployment
-## 静态站点推送到 pages，避免覆盖 main 上的源码；在 GitHub Settings → Pages 中将发布分支选为 pages / (root)
+## 静态站点推送到 page，与 GitHub Pages 发布分支一致；Settings → Pages 选 Branch: page / (root)
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repo: https://github.com/XiaoleC05/XiaoleC05.github.io.git
-  branch: pages
+  branch: page
