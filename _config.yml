@@ -12,8 +12,8 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## GitHub Pages 用户站点：仓库须为 <GitHub用户名>/<GitHub用户名>.github.io ，访问 https://xiaolec.github.io/
-url: https://xiaolec.github.io
+## GitHub Pages 用户站点：XiaoleC05/XiaoleC05.github.io → https://xiaolec05.github.io/
+url: https://xiaolec05.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -104,5 +104,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/XiaoleC/XiaoleC.github.io.git
+  repo: https://github.com/XiaoleC05/XiaoleC05.github.io.git
   branch: pages
