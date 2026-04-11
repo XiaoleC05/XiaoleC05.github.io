@@ -100,9 +100,9 @@ ignore:
 theme: landscape
 
 # Deployment
-## 静态站点推送到 gh-pages，避免覆盖 main 上的源码；在 GitHub 仓库 Settings → Pages → Build and deployment 中选 Branch: gh-pages / root
+## 静态站点推送到 pages，避免覆盖 main 上的源码；在 GitHub Settings → Pages 中将发布分支选为 pages / (root)
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repo: https://github.com/Guts-g20/Guts-g20.github.io.git
-  branch: gh-pages
+  branch: pages
