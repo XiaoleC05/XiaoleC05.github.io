@@ -12,6 +12,8 @@ layout: page
 
 如需邮件联系，建议将常用邮箱写在 GitHub 个人资料中，或在此处自行补充（注意垃圾邮件与爬虫采集风险）。
 
-### 评论 / 留言（可选后续）
+### 评论区说明
 
-若需要文章评论区，可启用 **Giscus**（基于 GitHub Discussions）。需要你在 Giscus 官网生成配置后，把参数填入 **`_config.fluid.yml`** 的 `giscus` 段，并打开 `post.comments.enable`。
+当前文章评论使用 **Utterances**（基于 GitHub **Issues**，标签 **`blog-comments`**）。首次评论会在仓库里自动创建对应 Issue。
+
+若改为 **Giscus**（基于 **Discussions**），请先在 GitHub 仓库设置中 **开启 Discussions**，再打开 [giscus.app/zh-CN](https://giscus.app/zh-CN) 生成 `category-id`，把 **`post.comments.type`** 改为 **`giscus`** 并填全 **`_config.fluid.yml`** 的 `giscus` 段（`repo-id` 已预填，见维护指南）。

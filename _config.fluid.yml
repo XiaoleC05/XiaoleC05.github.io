@@ -506,7 +506,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HST-SM4.jpeg/1920px-HST-SM4.jpeg"
+  banner_img: /img/banner.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -777,11 +777,11 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
-    # 指定的插件，需要同时设置对应插件的必要参数
+    enable: true
+    # Utterances：基于 Issues，无需开启 Discussions。若改用 Giscus，见维护指南并把 type 改为 giscus 且填全 giscus.category-id。
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
+    type: utterances
 
 
 #---------------------------
@@ -797,9 +797,9 @@ post:
 # Based on GitHub Issues
 # See: https://utteranc.es
 utterances:
-  repo:
+  repo: XiaoleC05/XiaoleC05.github.io
   issue_term: pathname
-  label: utterances
+  label: blog-comments
   theme: github-light
   theme_dark: github-dark
 
@@ -927,9 +927,10 @@ cusdis:
 # Based on GitHub Discussions, similar to Utterances
 # See: https://giscus.app/
 giscus:
-  repo:
-  repo-id:
-  category:
+  # 以下供改用 Giscus 时填写（https://giscus.app/zh-CN ）。仓库 REST node_id 已填在 repo-id，category-id 需在开启 Discussions 后从页面生成器复制。
+  repo: XiaoleC05/XiaoleC05.github.io
+  repo-id: R_kgDOR-HuXw
+  category: Announcements
   category-id:
   theme-light: light
   theme-dark: dark
@@ -1062,14 +1063,38 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid 主题",
-      intro: "本博客使用的 Hexo 主题",
+      title: "Hexo",
+      intro: "静态博客框架官方站",
+      link: "https://hexo.io/zh-cn/",
+      avatar: "https://hexo.io/icon/favicon-32x32.png"
+    }
+    - {
+      title: "Fluid",
+      intro: "本博客使用的主题与文档",
       link: "https://hexo.fluid-dev.com/",
       avatar: "https://hexo.fluid-dev.com/img/favicon.png"
     }
     - {
+      title: "GitHub Pages",
+      intro: "本站点托管说明",
+      link: "https://docs.github.com/zh/pages",
+      avatar: "https://github.githubassets.com/favicons/favicon.png"
+    }
+    - {
+      title: "MDN",
+      intro: "Web 标准与 API 参考",
+      link: "https://developer.mozilla.org/zh-CN/",
+      avatar: "https://developer.mozilla.org/favicon.ico"
+    }
+    - {
+      title: "Node.js",
+      intro: "运行 Hexo 的运行时",
+      link: "https://nodejs.org/zh-cn",
+      avatar: "https://nodejs.org/static/images/favicons/favicon.png"
+    }
+    - {
       title: "NASA",
-      intro: "灵感与头图风格参考（素材请遵守各站点版权说明）",
+      intro: "天文与工程灵感（素材版权以原站为准）",
       link: "https://www.nasa.gov/",
       avatar: "https://www.nasa.gov/wp-content/uploads/2023/02/nasa-logo-web-rgba.png"
     }
@@ -1081,8 +1106,8 @@ links:
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
+    enable: true
+    content: '<hr><p><strong>友链申请（占位）</strong>：请通过 <a href="/contact/">联系页</a> 或 GitHub Issue 说明站点名、简介、链接与头像 URL；确认后会加入 <code>_config.fluid.yml</code> 的 <code>links.items</code>。</p>'
 
   # 评论插件
   # Comment plugin
