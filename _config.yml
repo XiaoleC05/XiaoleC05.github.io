@@ -6,14 +6,15 @@
 title: ChenXiaole
 subtitle: '个人网页测试'
 description: '个人网页测试描述'
-keywords:陈晓乐，个人网页，测试，chenxiaole
+keywords: '陈晓乐，个人网页，测试，chenxiaole'
 author: 陈晓乐
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://chenxiaole.com
+url: http://ChenXiaole.gitee.io
+root:/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -101,4 +102,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://gitee.com/XiaoleC/ChenXiaole.gitee.io.git
+  branch: main
