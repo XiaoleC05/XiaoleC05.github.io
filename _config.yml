@@ -100,8 +100,9 @@ ignore:
 theme: landscape
 
 # Deployment
+## 静态站点推送到 gitee-pages，避免覆盖 main 上的 Hexo 源码；在 Gitee「服务 → Gitee Pages」里把部署分支选为 gitee-pages
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repo: https://gitee.com/XiaoleC/ChenXiaole.gitee.io.git
-  branch: main
+  branch: gitee-pages
