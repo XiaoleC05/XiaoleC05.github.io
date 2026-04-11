@@ -12,9 +12,9 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://ChenXiaole.gitee.io
-root:/
+## Gitee Pages：在仓库「服务 → Gitee Pages」里开启后，以页面里显示的访问地址为准；常见为 https://chenxiaole.gitee.io
+url: https://chenxiaole.gitee.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
