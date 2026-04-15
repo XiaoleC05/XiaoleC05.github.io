@@ -100,7 +100,19 @@ fun_features:
     # 在指定页面开启，不填则在所有页面开启
     # Enable in specified page, all pages by default
     # Options: home | post | tag | category | about | links | page | 404
-    scope: []
+    # 排除 home：首页副标题由 source/js/home-banner-carousel.js 随机展示，避免与 Typed 冲突
+    scope:
+      - post
+      - page
+      - about
+      - links
+      - tag
+      - tags
+      - category
+      - categories
+      - archive
+      - archives
+      - "404"
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -234,6 +246,7 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
+  - /js/home-banner-carousel.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
@@ -523,12 +536,9 @@ index:
   slogan:
     enable: true
 
-    # 为空则按 hexo config.subtitle 显示，支持列表格式来实现随机选择一行文字显示
-    # If empty, text based on `subtitle` in hexo config, support list format to random selection of a row for display
-    text:
-      - "在星图与代码之间，记录学习与创造。"
-      - "技术 · 随笔 · 作品集 — 慢慢生长。"
-      - "保持好奇，像探测器一样向前多看一公里。"
+    # 为空则按 hexo config.subtitle 显示；首页随机副标题候选在 source/js/home-banner-carousel.js 的 SLIDES 中维护
+    # If empty, text based on `subtitle` in hexo config; home random lines live in home-banner-carousel.js SLIDES
+    text: "在星图与代码之间，记录学习与创造。"
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -1098,6 +1108,14 @@ links:
       link: "https://www.nasa.gov/",
       avatar: "https://www.nasa.gov/wp-content/uploads/2023/02/nasa-logo-web-rgba.png"
     }
+    - title: "Giscus"
+      intro: "基于 GitHub Discussions 的评论组件"
+      link: "https://giscus.app/"
+      avatar: "https://giscus.app/favicon.ico"
+    - title: "Utterances"
+      intro: "基于 GitHub Issues 的评论组件"
+      link: "https://utterances.github.io/"
+      avatar: "https://utterances.github.io/favicon.ico"
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image

@@ -7,13 +7,13 @@ layout: page
 
 | 方式 | 说明 |
 |------|------|
-| **GitHub** | [@XiaoleC05](https://github.com/XiaoleC05) — 适合技术交流、Issue 讨论 |
+| **GitHub** | [@XiaoleC05](https://github.com/XiaoleC05) |
 | **站点仓库** | [XiaoleC05/XiaoleC05.github.io](https://github.com/XiaoleC05/XiaoleC05.github.io) |
 
-如需邮件联系，建议将常用邮箱写在 GitHub 个人资料中，或在此处自行补充（注意垃圾邮件与爬虫采集风险）。
+### 邮箱
 
-### 评论区说明
+点击地址可打开系统默认邮件客户端；也可右键复制链接中的地址。
 
-当前文章评论使用 **Utterances**（基于 GitHub **Issues**，标签 **`blog-comments`**）。首次评论会在仓库里自动创建对应 Issue。
-
-若改为 **Giscus**（基于 **Discussions**），请先在 GitHub 仓库设置中 **开启 Discussions**，再打开 [giscus.app/zh-CN](https://giscus.app/zh-CN) 生成 `category-id`，把 **`post.comments.type`** 改为 **`giscus`** 并填全 **`_config.fluid.yml`** 的 `giscus` 段（`repo-id` 已预填，见维护指南）。
+- [714085964@qq.com](mailto:714085964@qq.com)（QQ）
+- [xiaoleC0@gmail.com](mailto:xiaoleC0@gmail.com)（Gmail）
+- [1270667498@qq.com](mailto:1270667498@qq.com)（QQ）

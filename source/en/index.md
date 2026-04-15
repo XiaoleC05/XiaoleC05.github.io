@@ -13,6 +13,6 @@ This is **ChenXiaole**’s personal site (Chinese-first). Here you’ll find tec
 - **GitHub:** [XiaoleC05](https://github.com/XiaoleC05)  
 - **RSS:** [Atom feed](/atom.xml)
 
-The navigation chrome stays **Chinese**; English content lives under **`/en/`**. For full theme UI in English (menus, dates), use Hexo’s official i18n workflow — see **`docs/网站维护指南.md`**.
+The navigation chrome stays **Chinese**; English content lives under **`/en/`**. A fully English theme UI (menus, dates, etc.) would need [Hexo internationalization](https://hexo.io/docs/internationalization); maintainer-oriented notes for this repo are in [`docs/网站维护指南.md` on GitHub (`main`)](https://github.com/XiaoleC05/XiaoleC05.github.io/blob/main/docs/网站维护指南.md).
 
 [← 返回中文首页](/)
