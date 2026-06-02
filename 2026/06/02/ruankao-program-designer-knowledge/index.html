@@ -1,0 +1,2691 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#0f172a">
+  <meta name="author" content="陈晓乐">
+  <meta name="keywords" content="陈晓乐, ChenXiaole, 博客, Hexo, Fluid, 前端, 开发笔记, GitHub Pages">
+  
+    <meta name="description" content="本文整理自个人软考复习笔记，覆盖程序设计师考试主要知识模块，便于检索与复习。  软考程序设计师面向对象技术UML图结构图 — 静态结构  - **类图** — 描述系统里有哪些类，以及他们的关系   - **对象图** — 某一时刻，系统中有哪些对象以及他们的关系   - **组件图** — 系统有哪些模块组成，及其依赖关系   - **部署图** — 描述软件与硬件之间的部署关系，系统运行在什">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软考程序设计师 — 知识点整理">
+<meta property="og:url" content="https://xiaolec05.github.io/2026/06/02/ruankao-program-designer-knowledge/">
+<meta property="og:site_name" content="ChenXiaole">
+<meta property="og:description" content="本文整理自个人软考复习笔记，覆盖程序设计师考试主要知识模块，便于检索与复习。  软考程序设计师面向对象技术UML图结构图 — 静态结构  - **类图** — 描述系统里有哪些类，以及他们的关系   - **对象图** — 某一时刻，系统中有哪些对象以及他们的关系   - **组件图** — 系统有哪些模块组成，及其依赖关系   - **部署图** — 描述软件与硬件之间的部署关系，系统运行在什">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-02T06:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-02T06:00:00.000Z">
+<meta property="article:author" content="陈晓乐">
+<meta property="article:tag" content="复习笔记">
+<meta property="article:tag" content="程序设计师">
+<meta property="article:tag" content="软考">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>软考程序设计师 — 知识点整理 - ChenXiaole</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/space-accent.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"xiaolec05.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["post","page","about","links","tag","tags","category","categories","archive","archives","404"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":false};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="ChenXiaole" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>ChenXiaole</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>个人博客</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我的</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友情链接</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/projects/" target="_self">
+                <i class="iconfont icon-folder-fill"></i>
+                <span>项目</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-mail-fill"></i>
+                <span>联系</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>个人博客</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于我的</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友情链接</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/projects/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-folder-fill"></i>
+                  <span>项目</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/contact/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-mail-fill"></i>
+                  <span>联系</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="软考程序设计师 — 知识点整理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-06-02 14:00" pubdate>
+          2026年6月2日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          27k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          223 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">软考程序设计师 — 知识点整理</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>本文整理自个人软考复习笔记，覆盖程序设计师考试主要知识模块，便于检索与复习。</p>
+</blockquote>
+<h1 id="软考程序设计师"><a href="#软考程序设计师" class="headerlink" title="软考程序设计师"></a>软考程序设计师</h1><h2 id="面向对象技术"><a href="#面向对象技术" class="headerlink" title="面向对象技术"></a>面向对象技术</h2><h3 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h3><h4 id="结构图-—-静态结构"><a href="#结构图-—-静态结构" class="headerlink" title="结构图 — 静态结构"></a>结构图 — 静态结构</h4><pre><code class="hljs">  - **类图** — 描述系统里有哪些类，以及他们的关系
+  - **对象图** — 某一时刻，系统中有哪些对象以及他们的关系
+  - **组件图** — 系统有哪些模块组成，及其依赖关系
+  - **部署图** — 描述软件与硬件之间的部署关系，系统运行在什么机器上
+  - **包图** — 描述系统的包结构，代码文件是怎么分层的
+  - **复合结构图** — 类的内部结构及其协作关系
+</code></pre>
+<h4 id="行为图-—-单体动态活动"><a href="#行为图-—-单体动态活动" class="headerlink" title="行为图 — 单体动态活动"></a>行为图 — 单体动态活动</h4><pre><code class="hljs">  - **用例图** — 描述系统功能以及参与者之间的关系
+  - **活动图** — 描述系统的控制流程和数据流程是怎么走的
+  - **状态图** — 描述对象会经历哪些状态变化，对象在生命周期中的状态变化以及转换
+</code></pre>
+<h4 id="交互图-—-多对象参与交互协作"><a href="#交互图-—-多对象参与交互协作" class="headerlink" title="交互图 — 多对象参与交互协作"></a>交互图 — 多对象参与交互协作</h4><pre><code class="hljs">  - **顺序图（序列图）** — 描述对象之间按时间顺序进行的消息交互，按照时间顺序谁先调用谁
+  - **通信图** — 对象之间的交互关系以及消息传递
+  - **时序图** — 描述对象随时间变化的情况
+  - **交互概览图** — 结合活动图和顺序图，描述多个交互的总体流程
+</code></pre>
+<h3 id="设计模式-—-一类问题的成熟解决方案，在特定环境下，对软件设计中反复出现的问题所提出的通用解决方案。"><a href="#设计模式-—-一类问题的成熟解决方案，在特定环境下，对软件设计中反复出现的问题所提出的通用解决方案。" class="headerlink" title="设计模式 — 一类问题的成熟解决方案，在特定环境下，对软件设计中反复出现的问题所提出的通用解决方案。"></a>设计模式 — 一类问题的成熟解决方案，在特定环境下，对软件设计中反复出现的问题所提出的通用解决方案。</h3><h4 id="创建型-—-如何创建对象"><a href="#创建型-—-如何创建对象" class="headerlink" title="创建型 — 如何创建对象"></a>创建型 — 如何创建对象</h4><pre><code class="hljs">  - **单例模式Singleton** — 保证系统中某个类只能有一个实例,提供全局访问点
+  - **工厂方法模式Factory Method** — 定义创建对象的接口，由子类决定实例化哪个类
+  - **抽象工厂模式Abstract Factory** — 提供一个接口，用于创建一系列相关或相互依赖的对象
+  - **建造者模式Builder** — 一步一步组装复杂对象，将复杂对象的构建过程与其表示分离，使同一个构建过程可创建不同结果
+  - **原型模式Prototype** — 通过复制已有实例来创建新对象
+</code></pre>
+<h4 id="结构型-—-如何组织类-对象，只有类适配器是结构型类，其它都是对象"><a href="#结构型-—-如何组织类-对象，只有类适配器是结构型类，其它都是对象" class="headerlink" title="结构型 — 如何组织类&#x2F;对象，只有类适配器是结构型类，其它都是对象"></a>结构型 — 如何组织类&#x2F;对象，只有类适配器是结构型类，其它都是对象</h4><pre><code class="hljs">  - **适配器Adapter** — 转换不兼容接口
+  - **桥接Bridge** — 把抽象和实现分开，使他们可以独立变化
+  - **组合Composite** — 将对象组合成树形结构表示整体-部分，统一处理
+  - **装饰Decorator** — 在不改变对象结构的情况下，动态扩展其功能
+  - **外观Facade** — 为子系统提供统一接口，简化使用
+  - **享元Flyweight** — 运用共享技术有效支持大量细粒度对象
+  - **代理Proxy** — 为其它对象提供代理以控制对他的访问，用替身控制访问
+</code></pre>
+<h4 id="行为型-—-如何分配职责与交互，除解释器模式以外都是对象行为模式"><a href="#行为型-—-如何分配职责与交互，除解释器模式以外都是对象行为模式" class="headerlink" title="行为型 — 如何分配职责与交互，除解释器模式以外都是对象行为模式"></a>行为型 — 如何分配职责与交互，除解释器模式以外都是对象行为模式</h4><pre><code class="hljs">  - **策略Strategy** — 算法可以随时替换，定义一系列算法，使其可以相互替换
+  - **观察者Observer** — 定义对象间一对多依赖关系，状态变化时通知所有依赖者
+  - **命令Command** — 把操作封装成对象，从而支持参数化与撤销操作
+  - **状态State** — 允许对象在内部状态改变时改变其行为
+  - **职责链Chain of Responsibility** — 一层一层处理请求，使多个对象都有机会处理请求，形成链式请求
+  - **模板方法Template Method** — 定义算法骨架，将步骤延迟到子类实现
+  - **迭代器Iterator** — 提供顺序访问集合元素的方法，而不暴露内部结构
+  - **中介者Mediator** — 所有对象通过中间人沟通，用一个中介对象封装一系列对象交互
+  - **备忘录Memento** — 保存快照，随时恢复，在不破坏封装的情况下，保存对象状态以便恢复
+  - **访问者Visitor** — 不改类，新增操作
+  - **解释器Interpreter** — 定义语言文法，并解释执行语句，唯一的类行为模式
+</code></pre>
+<h3 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h3><h4 id="面相对象基础概念"><a href="#面相对象基础概念" class="headerlink" title="面相对象基础概念"></a>面相对象基础概念</h4><pre><code class="hljs">  - 对象
+  - 消息
+  - 类
+  - 继承
+  - **多态** — 参数的、包含的、过载的、强制的
+  - 动态绑定
+</code></pre>
+<h4 id="面向对象分析OOA"><a href="#面向对象分析OOA" class="headerlink" title="面向对象分析OOA"></a>面向对象分析OOA</h4><pre><code class="hljs">  - 认定对象
+  - 组织对象
+  - 对象间的相互作用
+  - 基于对象的操作
+</code></pre>
+<h4 id="面向对象设计-OOD"><a href="#面向对象设计-OOD" class="headerlink" title="面向对象设计 OOD"></a>面向对象设计 OOD</h4><h5 id="面向对象设计的活动"><a href="#面向对象设计的活动" class="headerlink" title="面向对象设计的活动"></a>面向对象设计的活动</h5><pre><code class="hljs">    - 识别类及对象
+    - 定义属性
+    - 定义服务
+    - 识别关系
+    - 识别包
+</code></pre>
+<h5 id="面向对象设计的原则-—-控制复杂度，提高可维护性"><a href="#面向对象设计的原则-—-控制复杂度，提高可维护性" class="headerlink" title="面向对象设计的原则 — 控制复杂度，提高可维护性"></a>面向对象设计的原则 — 控制复杂度，提高可维护性</h5><pre><code class="hljs">    - **单一责任原则** — 一个类只负责一件事
+    - **开放-封闭原则** — 对扩展开放，对修改关闭
+    - **里氏替换原则** — 子类必须能替换父类
+    - **依赖倒置原则** — 高层模块不依赖低层模块
+    - **接口分离原则** — 不要强迫类实现不需要的接口
+</code></pre>
+<h4 id="面向对象程序设计OOP"><a href="#面向对象程序设计OOP" class="headerlink" title="面向对象程序设计OOP"></a>面向对象程序设计OOP</h4><pre><code class="hljs">  - 类
+  - 继承和类层次结构
+  - 对象、消息传递和方法
+  - 对象自身引用
+  - 重置
+  - 类属类
+  - 无实例的类
+</code></pre>
+<h4 id="面向对象测试"><a href="#面向对象测试" class="headerlink" title="面向对象测试"></a>面向对象测试</h4><pre><code class="hljs">  - 算法层
+  - 类层
+  - 模板层
+  - 系统层
+</code></pre>
+<h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h3 id="计算机系统基础知识"><a href="#计算机系统基础知识" class="headerlink" title="计算机系统基础知识"></a>计算机系统基础知识</h3><h4 id="计算机系统硬件基本组成"><a href="#计算机系统硬件基本组成" class="headerlink" title="计算机系统硬件基本组成"></a>计算机系统硬件基本组成</h4><pre><code class="hljs">  - 运算器
+  - 控制器
+  - 存储器
+  - 输入设备
+  - 输出设备
+</code></pre>
+<h4 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h4><h5 id="CPU的功能"><a href="#CPU的功能" class="headerlink" title="CPU的功能"></a>CPU的功能</h5><pre><code class="hljs">    - 程序控制
+    - 操作控制
+    - 时间控制
+    - 数据处理
+    - 异常处理
+</code></pre>
+<h5 id="CPU组成"><a href="#CPU组成" class="headerlink" title="CPU组成"></a>CPU组成</h5><h6 id="运算器"><a href="#运算器" class="headerlink" title="运算器"></a>运算器</h6><pre><code class="hljs">      - **算数逻辑单元（ALU）** — 负责算术、逻辑、比较运算
+      - **累加寄存器（AC）** — 保存计算中间结果
+      - **数据缓冲寄存器（DR）** — 暂存正在传输的数据
+      - 状态条件寄存器（PSW）/保存CPU当前状态
+</code></pre>
+<h6 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h6><pre><code class="hljs">      - **指令寄存器（IR）** — 当前正在执行的指令
+      - **程序计数器（PC）** — 下一条指令的内存地址
+      - **地址寄存器（AR）** — 当前访问的内存地址
+      - **指令译码器（ID）** — 翻译指令的意思
+</code></pre>
+<h6 id="寄存器组"><a href="#寄存器组" class="headerlink" title="寄存器组"></a>寄存器组</h6><pre><code class="hljs">      - 高速，小容量，CPU内部，不需要经过总线访问内存
+</code></pre>
+<h5 id="多核CPU"><a href="#多核CPU" class="headerlink" title="多核CPU"></a>多核CPU</h5><pre><code class="hljs">    - 一个CPU芯片中有多个处理核心，本质为多个CPU同时工作，并行
+    - 并发：宏观同时。并行：真正同时执行
+</code></pre>
+<h4 id="数据表示"><a href="#数据表示" class="headerlink" title="数据表示"></a>数据表示</h4><pre><code class="hljs">  - **原码** — 最高位0正1负，其余数值
+  - **反码** — 正数=原码，负数=原码符号位不变，其余位取反
+  - **补码** — 正数=原码，负数=反码+1。
+     真值=补码值-2n,n是位数
+     使CPU可以统一加减法。
+     n位补码范围：-2n-1 —— 2n-1-1
+     补码的最高位权值为负
+  - **移码** — 移码=真值+偏置值（Bias）
+  - 定点数
+  - **浮点数** — N = M（尾数） × R（基数）^E（阶码）^
+     IEEE754浮点数，现代计算机标准
+     单精度32位，1位符号位（正负），8位阶码（数量级），23位尾数（精度）
+  - **字符表示** — 0-48，A-65，Z-90，a-97，z-122，大小写字母差32
+</code></pre>
+<h4 id="校验码"><a href="#校验码" class="headerlink" title="校验码"></a>校验码</h4><h5 id="奇偶校验码-—-检错"><a href="#奇偶校验码-—-检错" class="headerlink" title="奇偶校验码 — 检错"></a>奇偶校验码 — 检错</h5><pre><code class="hljs">    - 增加一位校验码使1的个数变为奇数或者偶数
+    - 奇校验，使数据中1的个数为奇数
+    - 偶校验，使数据中1的个数为偶数
+    - 偶数位错误无法发现
+</code></pre>
+<h5 id="海明码-—-检错纠错"><a href="#海明码-—-检错纠错" class="headerlink" title="海明码 — 检错纠错"></a>海明码 — 检错纠错</h5><pre><code class="hljs">    - 增加多个校验位，让每个数据位参与不同校验组合
+    - 数据位=n,校验位=k，2^k^≥n+k+1，根据数据位计算应该增加的校验位
+    - 校验位放在第1,2,4,8……其余位置放数据位，P1,P2,D1,P3,D3,D4,D5,P3,……
+    - 采用偶校验或者奇校验，通常选择偶校验
+    - 从P1开始计算校验位，选择2^0^位是1的位置进行组合来判断P1是0还是1，P2选择2^1^位是1的位置进行组合来判断P2是0还是1，P3选择2^2^是1的位置进行组合来判断P3是0还是1，……最终写出完整海明码
+</code></pre>
+<h5 id="循环冗余校验码（CRC）-—-强检错"><a href="#循环冗余校验码（CRC）-—-强检错" class="headerlink" title="循环冗余校验码（CRC） — 强检错"></a>循环冗余校验码（CRC） — 强检错</h5><pre><code class="hljs">    - 发送方：数据后补0，把二进制数据看成多项式，做模2除法，余数作为CRC校验码
+    - 接收方：再次模2除，如果余数=0则认为正确，不是则认为错误
+    - 不借位、不进位、减法等于异或XOR
+</code></pre>
+<h3 id="计算机体系结构"><a href="#计算机体系结构" class="headerlink" title="计算机体系结构"></a>计算机体系结构</h3><h4 id="计算机体系结构发展"><a href="#计算机体系结构发展" class="headerlink" title="计算机体系结构发展"></a>计算机体系结构发展</h4><h5 id="计算机体系结构分类"><a href="#计算机体系结构分类" class="headerlink" title="计算机体系结构分类"></a>计算机体系结构分类</h5><h6 id="按处理机数量分类"><a href="#按处理机数量分类" class="headerlink" title="按处理机数量分类"></a>按处理机数量分类</h6><pre><code class="hljs">      - 单处理系统
+      - 并行处理与多处理系统
+      - 分布式处理系统
+</code></pre>
+<h6 id="从微观上进行分类"><a href="#从微观上进行分类" class="headerlink" title="从微观上进行分类"></a>从微观上进行分类</h6><pre><code class="hljs">      - **Flynn分类法** — 指令流，数据流。
+           分为四类：SISD（单指令流，单数据流）、SIMD（单指令流，多数据流）、MISD（多指令流，单数据流）、MIMD（多指令流，多数据流）
+      - **冯泽云分类法** — 存储程序方式。
+           程序和数据放在内存里统一存储，CPU自动取指顺序执行
+      - **Handler分类法** — 处理器层次、并行程度
+           关注系统有多少层并行
+      - **Kuck分类法** — 指令级并行，关注CPU能不能同时执行多条指令
+</code></pre>
+<h5 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h5><h6 id="CISC-—-让程序简单，将复杂性交给硬件"><a href="#CISC-—-让程序简单，将复杂性交给硬件" class="headerlink" title="CISC — 让程序简单，将复杂性交给硬件"></a>CISC — 让程序简单，将复杂性交给硬件</h6><pre><code class="hljs">      - 复杂指令系统，指令数量多，复杂度高，长度不固定，流水线困难
+      - 优点程序短，编程方便
+      - 缺点指令集过分庞杂，机器处理速度慢，难以优化编译生成高效代码，芯片设计复杂
+</code></pre>
+<h6 id="RISC-—-让硬件简单，将复杂性交给软件-编译器"><a href="#RISC-—-让硬件简单，将复杂性交给软件-编译器" class="headerlink" title="RISC — 让硬件简单，将复杂性交给软件&#x2F;编译器"></a>RISC — 让硬件简单，将复杂性交给软件&#x2F;编译器</h6><pre><code class="hljs">      - 精简指令集计算机，指令数量少，复杂度低长度固定，只保留简单高频指令。
+      - 优点易流水线，CPU结构简单，容易提高频率
+      - 缺点程序变长
+</code></pre>
+<h6 id="指令的流水处理"><a href="#指令的流水处理" class="headerlink" title="指令的流水处理"></a>指令的流水处理</h6><pre><code class="hljs">      - 每个阶段的耗时t~i~，指令数n，T=∑t~i~​+(n−1)max(t~i~​)
+</code></pre>
+<h5 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h5><pre><code class="hljs">    - 立即寻址，数据写在指令里，快速但数据范围有限
+    - 直接寻址，直接给出内存地址，简单但是地址范围受限
+    - 间接寻址，给出数据地址的地址，扩大寻址范围但是访问内存次数增加
+    - 寄存器寻址，数据在寄存器里，速度极快
+    - 寄存器间接寻址，寄存器中存放地址，灵活
+    - 相对寻址，对当前地址加一个偏移量，用于跳转指令，可浮动加载，在哪里都可以运行
+    - 基址寻址，把一个基准地址放在基址寄存器中，指令中给偏移量，适合程序迁移
+    - 变址寻址，和基址寻址类似但是更适合数组
+    - 相对寻址
+    - 堆栈寻址
+</code></pre>
+<h5 id="阵列处理机"><a href="#阵列处理机" class="headerlink" title="阵列处理机"></a>阵列处理机</h5><h5 id="并行处理机"><a href="#并行处理机" class="headerlink" title="并行处理机"></a>并行处理机</h5><h5 id="多处理机"><a href="#多处理机" class="headerlink" title="多处理机"></a>多处理机</h5><h4 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h4><pre><code class="hljs">  - 层次结构：CPU内部通用寄存器 --&gt; Cache --&gt; 主存储器 --&gt; 联机磁盘存储器 --&gt; 脱机光盘、磁盘存储器
+</code></pre>
+<h5 id="存储器分类："><a href="#存储器分类：" class="headerlink" title="存储器分类："></a>存储器分类：</h5><pre><code class="hljs">    - 按所处位置分为内存（主存）、外存（辅存）
+    - 按材料分为磁存储器、半导体存储器（又分为DRAM动态，和SRAM静态，DRAM集成率相对较低功耗相对较大，不需要动态刷新，SARM相反）、光存储器
+    - 按工作方式分为读写存储器（RAM）、只读存储器：固定只读存储器（ROM）、可编程的只读存储器（PROM）、可擦除可编程的只读存储器（EPROM）、电擦除可编程的只读存储器（EEPROM）、闪速存储器（FM，闪存）
+    - 按访问方式分为按地址访问的存储器和按内容访问的存储器
+    - 按寻址方式分为随机存储器（RAM，按地址访问任一单元）、顺序存储器（SAM，按顺序查找目标）、直接存储器（DAM，按目标所在数据块访问，介于RAM和SAM之间）
+</code></pre>
+<h5 id="相联存储器-—-按内容访问"><a href="#相联存储器-—-按内容访问" class="headerlink" title="相联存储器 — 按内容访问"></a>相联存储器 — 按内容访问</h5><h5 id="高速缓存Cache"><a href="#高速缓存Cache" class="headerlink" title="高速缓存Cache"></a>高速缓存Cache</h5><h6 id="高速缓存的组成"><a href="#高速缓存的组成" class="headerlink" title="高速缓存的组成"></a>高速缓存的组成</h6><h6 id="高速缓存的地址映像方法"><a href="#高速缓存的地址映像方法" class="headerlink" title="高速缓存的地址映像方法"></a>高速缓存的地址映像方法</h6><pre><code class="hljs">      - **直接映像** — 公式：Cache行号=主存块号 mod Cache行数，简单速度快，容易冲突
+      - **全相联映像** — 主存块可存放在Cache任意位置，冲突最少命中率高，查找复杂硬件昂贵
+      - **组相连映像** — 分组后再组内任意存放，折中方案
+</code></pre>
+<h6 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h6><pre><code class="hljs">      - **随机替换算法** — 随机替换Cache中的数据
+      - **先进先出算法** — 踢出最早进入的
+      - **近期最少使用算法** — 最近最少使用的
+      - **优化替换算法** — 先执行一次程序，统计cache替换情况，在第二次执行时使用最有效的方法
+</code></pre>
+<h6 id="高速缓存的性能分析"><a href="#高速缓存的性能分析" class="headerlink" title="高速缓存的性能分析"></a>高速缓存的性能分析</h6><pre><code class="hljs">      - **命中率** — 当CPU访问Cache时找到数据的概率，命中率=命中次数/访问总次数
+</code></pre>
+<h6 id="多级高速缓存"><a href="#多级高速缓存" class="headerlink" title="多级高速缓存"></a>多级高速缓存</h6><pre><code class="hljs">      - 现代CPU不止一级Cache ，L1最快最小，层级越大越慢越大
+</code></pre>
+<h5 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h5><h6 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h6><pre><code class="hljs">      - 程序越来越大，物理内存不够用，于是把外存当作内存扩展
+</code></pre>
+<h5 id="外存储器"><a href="#外存储器" class="headerlink" title="外存储器"></a>外存储器</h5><h5 id="磁盘列阵技术"><a href="#磁盘列阵技术" class="headerlink" title="磁盘列阵技术"></a>磁盘列阵技术</h5><h5 id="存储域网络"><a href="#存储域网络" class="headerlink" title="存储域网络"></a>存储域网络</h5><h4 id="输入-输出技术"><a href="#输入-输出技术" class="headerlink" title="输入&#x2F;输出技术"></a>输入&#x2F;输出技术</h4><h5 id="最常见的内存与接口编址方法"><a href="#最常见的内存与接口编址方法" class="headerlink" title="最常见的内存与接口编址方法"></a>最常见的内存与接口编址方法</h5><pre><code class="hljs">    - **内存与接口地址统一编址方法** — 把IO设备寄存器映射到内存地址，指令统一编程简单，但是占用内存地址空间
+    - **内存与接口地址独立编址方法** — IO和内存分开，CPU使用专门的IO指令，不占内存空间，但是硬件很复杂
+</code></pre>
+<h5 id="直接程序控制-—-CPU直接管理IO设备"><a href="#直接程序控制-—-CPU直接管理IO设备" class="headerlink" title="直接程序控制 — CPU直接管理IO设备"></a>直接程序控制 — CPU直接管理IO设备</h5><pre><code class="hljs">    - **无条件传送** — 不检查设备状态，CPU始终认为设备已经准备好，直接传输，简单但极不可靠
+    - **程序查询方式** — CPU不断查询设备状态，简单容易实现但是会造成CPU长时间空转
+</code></pre>
+<h5 id="中断方式"><a href="#中断方式" class="headerlink" title="中断方式"></a>中断方式</h5><h6 id="中断处理方法"><a href="#中断处理方法" class="headerlink" title="中断处理方法"></a>中断处理方法</h6><pre><code class="hljs">      - **多中断信号法** — 每个设备单独一根中断线，简单直观但是当设备数量多时中断线数量爆炸
+      - **中断软件查询法** — 所有设备共用一个中断线，CPU收到中断后逐个查询设备状态，硬件简单但是CPU查询开销大，谁先查谁优先
+      - **菊花链法 Dasisy Chain** — 把设备串成一条链，离CPU越近优先级越高，硬件简单，但是可能导致低优先级设备长期饿死
+      - **总线仲裁法** — 分为集中仲裁和分布仲裁，决定谁先获得总线控制权
+      - **中断向量表法** — 最常用，每种中断对应固定入口地址，CPU收到中断后直接查询中断向量表，速度快，易扩展
+</code></pre>
+<h6 id="优先级控制"><a href="#优先级控制" class="headerlink" title="优先级控制"></a>优先级控制</h6><pre><code class="hljs">      - 高优先级可以打断低优先级，即中断嵌套，分为硬件优先级，由硬件直接决定速度快，软件优先级，CPU程序判断灵活
+      - 中断屏蔽，暂时禁止某些中断
+      - 中断请求--&gt;中断判优--&gt;中断响应--&gt;保护现场，保存PC、寄存器、PSW--&gt;执行中断程序--&gt;恢复现场--&gt;中断返回
+</code></pre>
+<h5 id="直接存储器存取方式DMA"><a href="#直接存储器存取方式DMA" class="headerlink" title="直接存储器存取方式DMA"></a>直接存储器存取方式DMA</h5><pre><code class="hljs">    - 让IO设备和内存直接交换数据，CPU不参与数据处理
+    - 由DMA控制器、内存、IO设备、总线组成
+    - CPU初始化DMA--&gt;DMA申请总线--&gt;CPU让出总线--&gt;DMA直接传输--&gt;DMA结束
+    - CPU负担小速度快，提高系统效率，硬件复杂，适用于高速设备
+</code></pre>
+<h5 id="输入输出处理机IOP"><a href="#输入输出处理机IOP" class="headerlink" title="输入输出处理机IOP"></a>输入输出处理机IOP</h5><pre><code class="hljs">    - 专门负责IO的小CPU，适合大型系统
+</code></pre>
+<h4 id="总线Bus"><a href="#总线Bus" class="headerlink" title="总线Bus"></a>总线Bus</h4><h5 id="总线分类"><a href="#总线分类" class="headerlink" title="总线分类"></a>总线分类</h5><pre><code class="hljs">    - **数据总线** — 传输数据，双向传输，数据总线的宽度决定一次能传多少位
+    - **地址总线** — 指定访问地址，单向，地址总线宽度决定最大寻址能力
+    - **控制总线** — 传输控制命令
+</code></pre>
+<h5 id="常见总线"><a href="#常见总线" class="headerlink" title="常见总线"></a>常见总线</h5><pre><code class="hljs">    - PCle显卡，USB外设,SATA硬盘，ISA，老式PC，SPI嵌入式，I2C芯片通信
+</code></pre>
+<h3 id="计算机评测基础知识"><a href="#计算机评测基础知识" class="headerlink" title="计算机评测基础知识"></a>计算机评测基础知识</h3><pre><code class="hljs">- 从计算机开始运行到某一时刻t这段时间内能正常运行的概率叫做可靠性，用R(t)表示
+- 单位时间内失效的元件数与元件总数的比例叫做失效率，用λ表示，当λ为常数时，可靠性与失效率的关系为： R(t)=e^-λt^  （浴盆曲线）
+- 两次无故障之间系统能正常工作的时间的平均值称为平均无故障时间，MTBF=1/λ
+- 用平均修复时间MTRF来表示计算机的可维修性，即计算机的维修效率，指从故障发生到机器修复平均所需要的时间
+- 计算机的可用性是指计算机的使用效率，以系统在执行任务的任意时刻能正常工作的概率A表示，A=MTBF/(MTBF+MTRF)
+- 使用RAS，R、A、S这三个指标衡量计算机系统
+</code></pre>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h3 id="操作系统的特征与功能"><a href="#操作系统的特征与功能" class="headerlink" title="操作系统的特征与功能"></a>操作系统的特征与功能</h3><h4 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h4><pre><code class="hljs">  并发性。操作系统能够让多个程序在一段时间内交替运行。
+  共享性。多个程序共同使用系统资源
+  虚拟性。操作系统把有限的物理资源抽象成多个逻辑资源
+  不确定性。程序运行顺序和时间不可预知
+</code></pre>
+<h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><h5 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h5><h6 id="程序与进程"><a href="#程序与进程" class="headerlink" title="程序与进程"></a>程序与进程</h6><pre><code class="hljs">        进程是程序的一次执行
+        程序顺序执行。一个程序执行完再执行下一个
+        程序并发执行。多个程序在一段时间内宏观同时推进
+</code></pre>
+<h6 id="进程的组成"><a href="#进程的组成" class="headerlink" title="进程的组成"></a>进程的组成</h6><pre><code class="hljs">        PCB：进程控制块，操作系统用来管理进程的数据结构。包含进程ID、当前状态、程序计数器、优先级等等。PCB是进程存在的唯一标志
+        程序段：可执行代码与指令
+        数据段：包括变量、数组、堆、栈
+</code></pre>
+<h6 id="进程的状态以及状态切换"><a href="#进程的状态以及状态切换" class="headerlink" title="进程的状态以及状态切换"></a>进程的状态以及状态切换</h6><pre><code class="hljs">        三态模型：
+           运行态：进程正在占用CPU
+           就绪态：已经准备好运行
+           阻塞态：进程无法继续运行
+        五态模型：
+           运行态、就绪态、阻塞态
+           新建态：进程刚刚创建未进入就绪队列
+           终止态：进程执行结束，系统准备回收资源
+        活跃就绪：在内存中，等待CPU
+        静止就绪：在外存中，等待调入
+        活跃阻塞：在内存中，等待事件
+        静止阻塞：在外存中，等待事件
+</code></pre>
+<h6 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h6><pre><code class="hljs">        创建进程
+        删除进程
+        阻塞：进入等待
+        唤醒：恢复运行
+</code></pre>
+<h6 id="进程之间的通信"><a href="#进程之间的通信" class="headerlink" title="进程之间的通信"></a>进程之间的通信</h6><pre><code class="hljs">        同步与互斥：
+           同步：多个进程之间的执行顺序协调
+           互斥：同一时间只能一个进程访问资源
+        临界区的管理原则：
+           临界资源是一次只能一个进程使用的资源
+           临界区是访问临界资源的代码区域
+           有空即进：临界区空闲则允许进入
+           无空则等：已有进程进入临界区，其它进程必须等待
+           有限等待：进程不会永远等待，最终必须获得机会
+           让权等待：进程等待时不占用CPU
+        信号量机制：
+           使用整数变量S实现同步与互斥
+           P操作：申请资源，S=S-1，如果S&lt;0则阻塞
+           V操作：释放资源，S=S+1，如果有进程在等待则唤醒一个进程
+        高级通信原语：
+           管道：数据流
+           消息队列：消息传递
+           共享内存：
+           Socket：网络通信
+</code></pre>
+<h6 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h6><pre><code class="hljs">        管程的引入：信号量机制容易写错、死锁、忘记释放，因此提出管程，核心思想是把共享资源与操作封装起来。
+        管程的结构：
+           共享数据
+           操作函数
+           条件变量
+        使用管程解决生产者消费者问题：
+           生产者：放数据
+           消费者：取数据
+           使用notFull和notEmpty两个条件变量控制实现自动等待、自动唤醒
+</code></pre>
+<h6 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h6><pre><code class="hljs">        决定谁获得CPU
+        三级调度：
+           高级调度：决定哪个作业从外存进入内存
+           中级调度：决定哪些进程被挂起
+           低级调度：决定哪个进程使用CPU
+        调度算法：
+           先来先服务：先到先执行。简单但是短作业可能等待长时间
+           时间片轮转：每个进程分配时间片，时间一到强制切换。公平，适合分时系统
+           优先级调度：优先级高先执行。优先级低可能饿死
+           多级反馈调度：使用多个队列，不同时间片、动态调整优先级
+        进程优先级确定：
+           系统进程-优先级高
+           交互进程-优先级高
+           CPU密集型-适当降低
+           IO密集型-适当提高
+</code></pre>
+<h6 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h6><pre><code class="hljs">        死锁产生原因以及4个必要条件：
+           多个进程互相等待资源，最终谁也无法继续
+           互斥条件：资源一次只能一个进程使用
+           请求与保持：已经占有资源同时申请新资源
+           不可剥夺：资源不能被强制抢走
+           循环等待：形成等待环
+        死锁处理：
+           预防死锁：破坏死锁四个条件之一
+           避免死锁：动态检测风险。银行家算法
+           检测与解除：允许死锁发生，但是之后检测并恢复
+</code></pre>
+<h6 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h6><pre><code class="hljs">        进程创建开销大、切换开销大，于是提出了线程
+        线程是CPU调度的基本单位，进程是资源分配的基本单位，一个进程可以有多个线程
+        同一进程的线程共享内存、文件、数据
+        并发能力强、响应快、CPU利用率高，但是容易出现竞争更容易死锁、调试困难
+</code></pre>
+<h5 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h5><h6 id="文件与文件系统"><a href="#文件与文件系统" class="headerlink" title="文件与文件系统"></a>文件与文件系统</h6><pre><code class="hljs">        文件：一组有名字的数据集合，让数据长期保存
+        文件系统：操作系统管理文件的方法和机制
+        文件类型：
+</code></pre>
+<h6 id="文件的结构与组织"><a href="#文件的结构与组织" class="headerlink" title="文件的结构与组织"></a>文件的结构与组织</h6><pre><code class="hljs">        文件的逻辑结构：用户看到的文件组织方式
+           有结构的记录式文件：文件由一个个记录组成，操作系统按记录读取，按记录查找
+           无结构的流式文件：文件被看成一串连续的字节流，简单但是需要程序解析
+        文件的物理结构：文件在磁盘中实际存储方式，磁盘空间被划分为块
+           连续结构：文件占据连续的块。读取速度快，但是磁盘会出现很多小空洞，文件扩展困难
+           链接结构：文件块不连续，每个块保存下一块的位置。容易扩展，随机访问慢，指针占用额外空间
+           索引结构：建立索引表，记录文件块位置。支持随机访问，文件扩展方便，但是需要额外空间
+           多个物理块的索引表：当文件很大，一个索引表放不下全部地址，于是使用一级索引、二级索引、多级索引
+</code></pre>
+<h6 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h6><pre><code class="hljs">        文件控制块FCB：文件的描述信息结构
+        目录结构：
+           一级目录结构：所有文件放在一起/root。文件名容易冲突，文件太多难管理
+           二级目录结构：每个用户使用不同目录/user1、/user2。避免不同用户重名
+           多级目录结构：现代操作系统目录结构/home/user/docs/a.txt。树形结构、层次清晰、容易管理
+</code></pre>
+<h6 id="存取方法和存储空间的管理"><a href="#存取方法和存储空间的管理" class="headerlink" title="存取方法和存储空间的管理"></a>存取方法和存储空间的管理</h6><pre><code class="hljs">        文件存取方法：
+           顺序存取
+           随机存取
+        文件存储空间管理方法：
+           空闲区表：记录连续空闲区域。简单但是碎片多是效率低
+           位示图：每个位表示一个磁盘块。例如0=空闲、1=占用。查找速度快
+           空闲块链：将空闲块通过链表连接。实现简单但是查找效率低
+           成组链接法：把空闲块分组管理
+</code></pre>
+<h6 id="文件的使用"><a href="#文件的使用" class="headerlink" title="文件的使用"></a>文件的使用</h6><h6 id="文件共享和保护"><a href="#文件共享和保护" class="headerlink" title="文件共享和保护"></a>文件共享和保护</h6><pre><code class="hljs">        文件共享：多个用户共同访问同一文件
+           硬链接：多个文件名指向同一个inode。inode是对于文件的引用。在存储器中的一份数据在文件系统中有多份不同的名字，他们都指向在存储器中的同一个文件。只有删除全部引用才能真正删除该文件
+           符号链接：快捷方式，保存的是路径
+        文件保护：
+           存取控制矩阵：用户×文件×权限
+           存取控制表：每个文件记录谁能访问
+           用户权限表：每个用户记录能访问哪些文件
+           密码：使用密码或者口令访问
+</code></pre>
+<h6 id="系统的安全与可靠性"><a href="#系统的安全与可靠性" class="headerlink" title="系统的安全与可靠性"></a>系统的安全与可靠性</h6><pre><code class="hljs">        系统安全
+        系统可靠性：
+           转储和恢复
+           日志文件
+           文件系统的一致性
+</code></pre>
+<h5 id="存储管理"><a href="#存储管理" class="headerlink" title="存储管理"></a>存储管理</h5><h6 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h6><pre><code class="hljs">        存储结构：
+           虚拟地址：程序看到的逻辑地址，由操作系统和硬件映射到物理地址
+           地址空间：程序能看到的全部地址范围
+           存储空间：真正的物理内存
+        地址重定位：
+           静态重定位：程序在装入内存时一次性修改全部地址
+           动态重定位：程序在运行时转换地址
+</code></pre>
+<h6 id="存储管理方案"><a href="#存储管理方案" class="headerlink" title="存储管理方案"></a>存储管理方案</h6><pre><code class="hljs">        分区存储管理：
+           固定分区：内存固定分成块，程序进入内存直接找能放入的块。会造成内部碎片
+           可变分区：按程序大小动态划分块。会造成外部碎片
+           可重定位分区：程序运行时允许移动，整理零散空间
+        分区保护：应该程序内存可能被其他程序修改进而导致错误。使用基址寄存器和界限寄存器保护
+</code></pre>
+<h6 id="分页存储管理"><a href="#分页存储管理" class="headerlink" title="分页存储管理"></a>分页存储管理</h6><pre><code class="hljs">        分页可以解决分区管理的外部碎片问题。把程序切成页，把内存切成页框，页和页框大小相同
+        纯分页存储管理：把程序和内存全部分成页和页框。使用页表记录虚拟页和物理页框的映射
+        快表：纯分页的访问速度太慢，于是引入高速缓存，缓存最近使用的页表项，如果直接命中则直接获得物理地址，否则查页表
+        两级页表机制：页表可能过于巨大，因此引入多级页表。一级页表记录二级页表位置，二级页表记录真正的映射
+</code></pre>
+<h6 id="分段存储管理"><a href="#分段存储管理" class="headerlink" title="分段存储管理"></a>分段存储管理</h6><pre><code class="hljs">        分页对程序的平分切割不符合程序的逻辑，程序包含代码段、数据段等等，于是引入分段。
+        按逻辑划分把程序划分为不同的段。符合程序逻辑但是会产生外部碎片
+</code></pre>
+<h6 id="段页式存储管理"><a href="#段页式存储管理" class="headerlink" title="段页式存储管理"></a>段页式存储管理</h6><pre><code class="hljs">        结合分页与分段的优点，先分段，再对段进行分页
+</code></pre>
+<h6 id="虚拟存储管理"><a href="#虚拟存储管理" class="headerlink" title="虚拟存储管理"></a>虚拟存储管理</h6><pre><code class="hljs">        程序可能非常大，大于内存，因此引入虚拟内存，只把当前需要的部分装入内存，其余部分仍在磁盘
+        程序局部性原理：程序运行具有局部性
+        虚拟存储器的实现：
+           请求分页系统：页面不会全部装入内存，访问时出现缺页再装入
+           请求分段系统：按段装入
+           请求段页式系统：段页结合
+        页面置换算法：
+        但内存满时，新页面进来必须换掉就的页
+        最佳置换算法：淘汰未来最长时间不用的页面。理论最优，但是无法真正实现
+        先进先出置换算法：淘汰最早进入的页。
+        最近最少未使用置换算法：最近最长时间未使用的页面，利用局部性原理，实现复杂，效果好
+        最近未用置换算法：淘汰最近未访问的页
+        工作集：程序在某时间段内真正频繁使用的页集合。如果工作集全部在内存，程序运行流畅。反之，频繁缺页系统不断换页造成抖动，几乎不执行程序
+</code></pre>
+<h5 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h5><h6 id="I-O软件"><a href="#I-O软件" class="headerlink" title="I&#x2F;O软件"></a>I&#x2F;O软件</h6><pre><code class="hljs">        CPU不可能直接操作所有设备，因此使用I/O软件把硬件差异屏蔽
+        用户程序--&gt;设备无关软件--&gt;设备驱动程序--&gt;中断处理程序--&gt;硬件设备
+</code></pre>
+<h6 id="设备管理使用的技术"><a href="#设备管理使用的技术" class="headerlink" title="设备管理使用的技术"></a>设备管理使用的技术</h6><pre><code class="hljs">        通道：专门负责I/O控制的处理器，代替CPU管理设备，是一种具有简单指令系统的处理机
+        DMA技术：设备直接与内存交换数据
+        Spooling技术：假脱机技术，利用磁盘模拟外部设备缓冲区实现CPU与设备并行和多用户共享设备。
+</code></pre>
+<h6 id="磁盘调度"><a href="#磁盘调度" class="headerlink" title="磁盘调度"></a>磁盘调度</h6><pre><code class="hljs">        磁盘访问速度慢，磁头移动消耗大量时间，因此引入磁盘调度
+        磁盘驱动调度：解决磁头移动问题
+           先来先服务
+           最短寻道时间优先
+           扫描算法：电梯算法，磁头像电梯一样一直向一个方向移动，到尽头后返回，沿路处理请求
+           单向扫描调度算法：循环扫描算法，只向一个方向移动，到尽头后立即返回起点，返回途中不服务
+        旋转调度算法：解决扇区旋转问题。选择合适扇区、调整读写顺序、减少旋转等待
+</code></pre>
+<h5 id="作业管理"><a href="#作业管理" class="headerlink" title="作业管理"></a>作业管理</h5><h6 id="作业与作业控制"><a href="#作业与作业控制" class="headerlink" title="作业与作业控制"></a>作业与作业控制</h6><pre><code class="hljs">        作业控制：操作系统对作业从提交到完成整个生命周期的管理
+        作业状态与转换：
+           提交：用户把作业提交给操作系统
+           后备：作业进入系统，等待资源分配中
+           执行：作业被调入内存开始运行
+           完成：作业执行结束
+        作业控制块JCB和作业后备队列
+</code></pre>
+<h6 id="作业调度"><a href="#作业调度" class="headerlink" title="作业调度"></a>作业调度</h6><pre><code class="hljs">        作业调度算法：
+           先来先服务
+           短作业优先：运行时间最短的作业优先，但是长任务可能会饥饿
+           响应比高优先：综合考虑等待时间和运行时间R=(等待时间+服务时间)/服务时间。等待时间：已经等待的时间。服务时间：预计运行时间。响应比R越高优先级越高
+           优先级调度算法：
+           均衡调度算法
+        作业调度算法性能衡量指标：
+           周转时间：作业从提交到完成的总时间，周转时间=完成时间-提交时间
+           带权周转时间：考虑作业运行时间后的周转效率。带权周转时间=周转时间/运行时间，越接近1越好
+           平均周转时间：对多个作业的周转时间求平均值
+           吞吐量：单位时间完成的作业数量
+           CPU利用率：CPU真正工作的时间比例
+</code></pre>
+<h6 id="用户界面"><a href="#用户界面" class="headerlink" title="用户界面"></a>用户界面</h6><pre><code class="hljs">        控制面板用户界面
+        字符用户界面
+        图形用户界面
+        新一代用户界面
+</code></pre>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="批处理操作系统"><a href="#批处理操作系统" class="headerlink" title="批处理操作系统"></a>批处理操作系统</h4><pre><code class="hljs">  提高计算机利用率
+</code></pre>
+<h4 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h4><pre><code class="hljs">  让多人同时交互使用
+</code></pre>
+<h4 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h4><pre><code class="hljs">  保证及时响应
+</code></pre>
+<h4 id="网络操作系统"><a href="#网络操作系统" class="headerlink" title="网络操作系统"></a>网络操作系统</h4><pre><code class="hljs">  实现网络通信与资源共享
+</code></pre>
+<h4 id="分布式操作系统"><a href="#分布式操作系统" class="headerlink" title="分布式操作系统"></a>分布式操作系统</h4><pre><code class="hljs">  多台机器像一台机器工作
+</code></pre>
+<h4 id="微型计算机操作系统"><a href="#微型计算机操作系统" class="headerlink" title="微型计算机操作系统"></a>微型计算机操作系统</h4><pre><code class="hljs">  面向个人计算机
+</code></pre>
+<h4 id="嵌入式操作系统"><a href="#嵌入式操作系统" class="headerlink" title="嵌入式操作系统"></a>嵌入式操作系统</h4><pre><code class="hljs">  面向专用设备
+  
+</code></pre>
+<h2 id="程序设计语言"><a href="#程序设计语言" class="headerlink" title="程序设计语言"></a>程序设计语言</h2><h3 id="汇编语言-—-面向特定计算机体系结构的符号化机器语言"><a href="#汇编语言-—-面向特定计算机体系结构的符号化机器语言" class="headerlink" title="汇编语言 — 面向特定计算机体系结构的符号化机器语言"></a>汇编语言 — 面向特定计算机体系结构的符号化机器语言</h3><h4 id="指令语句-—-符号化机器指令，汇编后生成对应机器码CPU直接执行"><a href="#指令语句-—-符号化机器指令，汇编后生成对应机器码CPU直接执行" class="headerlink" title="指令语句 — 符号化机器指令，汇编后生成对应机器码CPU直接执行"></a>指令语句 — 符号化机器指令，汇编后生成对应机器码CPU直接执行</h4><pre><code class="hljs">  - **传送指令** — 数据移动
+  - **算术运算指令** — 加减乘除
+  - **逻辑运算指令** — AND/OR/NOT
+  - **移位指令** — 位移
+  - **转移指令** — 跳转
+  - **处理机控制指令** — CPU控制
+</code></pre>
+<h4 id="伪指令语句-—-不是CPU指令"><a href="#伪指令语句-—-不是CPU指令" class="headerlink" title="伪指令语句 — 不是CPU指令"></a>伪指令语句 — 不是CPU指令</h4><pre><code class="hljs">  - 不产生机器代码
+  - CPU不执行
+  - 在汇编阶段处理
+  - 通常是分配存储空间，定义常量，定义变量，设置地址，给符号赋值
+</code></pre>
+<h4 id="宏指令语句-—-可重复使用的代码模板"><a href="#宏指令语句-—-可重复使用的代码模板" class="headerlink" title="宏指令语句 — 可重复使用的代码模板"></a>宏指令语句 — 可重复使用的代码模板</h4><pre><code class="hljs">  - 汇编时自动替换为完整代码
+     
+</code></pre>
+<h4 id="汇编程序-—-将汇编语言翻译成机器代码"><a href="#汇编程序-—-将汇编语言翻译成机器代码" class="headerlink" title="汇编程序 — 将汇编语言翻译成机器代码"></a>汇编程序 — 将汇编语言翻译成机器代码</h4><pre><code class="hljs">  - 汇编程序需要扫描两遍汇编代码，第一次记录符号地址，第二次生成机器码
+  - 第一次扫描：建立符号表ST，记录符号的地址；建立计数器LC，记录下一条指令地址，每处理一条机器指令LC增加对应长度；建立MOT1机器指令表，记录助记符；建立POT1伪指令表，记录伪指令
+  - 第二次扫描：生成机器代码，使用ST查符号地址、MOT2查操作码、POT2处理伪指令。
+</code></pre>
+<h3 id="编译程序-—-把高级语言翻译成目标程序（汇编代码或者机器代码）"><a href="#编译程序-—-把高级语言翻译成目标程序（汇编代码或者机器代码）" class="headerlink" title="编译程序 — 把高级语言翻译成目标程序（汇编代码或者机器代码）"></a>编译程序 — 把高级语言翻译成目标程序（汇编代码或者机器代码）</h3><h4 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h4><pre><code class="hljs">  - 对源程序进行词法分析
+  - 进行语法分析
+  - 进行语义分析
+  - 生成中间代码
+  - 代码优化
+  - 生成目标代码
+</code></pre>
+<h4 id="编译前端-—-理解程序含义"><a href="#编译前端-—-理解程序含义" class="headerlink" title="编译前端 — 理解程序含义"></a>编译前端 — 理解程序含义</h4><h5 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h5><pre><code class="hljs">     源程序只是字符串，词法分析将字符流转换成单词(Token)流，例如保留字VAR、标识符X、常数60、运算符+、分隔符;输出形式：(单词种类，单词值)，例如(id,X)
+     词法分析器：正规式描述规则，有限自动机FA识别字符串
+     正规式--&gt;NFA--&gt;DFA--&gt;DFA最小化--&gt;生成词法分析器
+     有限自动机：分为非确定有限自动机NFA和确定有限自动机DFA
+     正规语言满足：正规式、NFA、DFA三者等价
+</code></pre>
+<h5 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h5><pre><code class="hljs">     检查Token序列是否符合语法规则，生成语法树
+     上下文无关文法CFG，语法分析理论基础，文法是描述语言结构规则G=(Vn非终结符,Vt终结符,P产生式,S开始符号)
+     推导：不断替换非终结符，最终得到句子
+     最左推导：永远先替换最左非终结符
+     最右推导：永远先替换最右非终结符
+     自顶向下分析：
+</code></pre>
+<h5 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析"></a>语义分析</h5><pre><code class="hljs">     检查程序是否有意义，类型是否正确，运算是否合法，变量是否声明，参数是否匹配
+     建立符号表，插入类型转换节点
+</code></pre>
+<h5 id="中间代码"><a href="#中间代码" class="headerlink" title="中间代码"></a>中间代码</h5><pre><code class="hljs">     生成四元式格式(运算符，参数1，参数2，结果)
+</code></pre>
+<h4 id="编译后端-—-生成高效机器代码"><a href="#编译后端-—-生成高效机器代码" class="headerlink" title="编译后端 — 生成高效机器代码"></a>编译后端 — 生成高效机器代码</h4><pre><code class="hljs">  - 代码优化，减少时间开销和空间开销，常见方法：常量折叠、删除临时变量、公共字表达式消除、循环优化
+  - 目标代码生成，将中间代码转换成具体机器指令
+</code></pre>
+<h4 id="符号表管理-—-记录符号的名字、类型、地址、作用域，声明周期可持续到程序运行阶段"><a href="#符号表管理-—-记录符号的名字、类型、地址、作用域，声明周期可持续到程序运行阶段" class="headerlink" title="符号表管理 — 记录符号的名字、类型、地址、作用域，声明周期可持续到程序运行阶段"></a>符号表管理 — 记录符号的名字、类型、地址、作用域，声明周期可持续到程序运行阶段</h4><h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><h5 id="静态错误-—-编译阶段发生"><a href="#静态错误-—-编译阶段发生" class="headerlink" title="静态错误 — 编译阶段发生"></a>静态错误 — 编译阶段发生</h5><h5 id="动态错误-—-运行时发生"><a href="#动态错误-—-运行时发生" class="headerlink" title="动态错误 — 运行时发生"></a>动态错误 — 运行时发生</h5><h4 id="程序运行时内存"><a href="#程序运行时内存" class="headerlink" title="程序运行时内存"></a>程序运行时内存</h4><pre><code class="hljs">  程序运行时需要局部变量、函数参数、返回地址，栈帧形成函数调用栈
+</code></pre>
+<h4 id="编译原理基础–形式语言与自动机理论"><a href="#编译原理基础–形式语言与自动机理论" class="headerlink" title="编译原理基础–形式语言与自动机理论"></a>编译原理基础–形式语言与自动机理论</h4><h3 id="解释程序"><a href="#解释程序" class="headerlink" title="解释程序"></a>解释程序</h3><h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><pre><code class="hljs">  词法分析、语法分析、语义分析、立即执行
+</code></pre>
+<h4 id="高级语言编译与解释方式的比较"><a href="#高级语言编译与解释方式的比较" class="headerlink" title="高级语言编译与解释方式的比较"></a>高级语言编译与解释方式的比较</h4><pre><code class="hljs">  | 对比项      | 编译程序     | 解释程序              |
+  | -------- | -------- | ----------------- |
+  | 翻译时机     | 运行前一次完成  | 运行时边解释边执行         |
+  | 是否生成目标代码 | 是        | 否                 |
+  | 执行速度     | 快        | 慢                 |
+  | 内存占用     | 较低       | 较高                |
+  | 调试       | 较麻烦      | 较方便               |
+  | 跨平台      | 差        | 好                 |
+  | 错误发现     | 编译阶段集中发现 | 运行到才发现            |
+  | 代表语言     | C、C++    | Python、JavaScript |
+</code></pre>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h3><h4 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">     n个相同类型数据元素组成的有限序列
+</code></pre>
+<h5 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h5><pre><code class="hljs">     顺序存储(顺序表)：把元素放在连续的内存中，随机访问块，存储密度高。插入删除慢，容量固定
+     链式存储(链表):元素分散在内存中，通过指针连接，每个节点包括数据和指针。插入删除快速。查找慢，额外空间开销
+</code></pre>
+<h5 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h5><pre><code class="hljs">     | 操作          | 作用   |
+     | InitList     | 初始化  |
+     | DestroyList  | 销毁   |
+     | ClearList    | 清空   |
+     | ListEmpty    | 判空   |
+     | ListLength   | 求长度  |
+     | GetElem      | 取元素  |
+     | LocateElem   | 查找元素 |
+     | PriorElem    | 前驱   |
+     | NextElem     | 后继   |
+     | ListInsert   | 插入   |
+     | ListDelete   | 删除   |
+     | TraverseList | 遍历   |
+</code></pre>
+<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><h5 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">     后进先出，只能在栈顶进行插入和删除操作，另一端叫栈底。
+     | 术语 | 含义      |
+     | 栈顶 | 允许操作的一端 |
+     | 栈底 | 固定的一端   |
+     | 入栈 | 插入元素    |
+     | 出栈 | 删除元素    |
+     | 空栈 | 没有元素    |
+     | 栈满 | 栈空间已满   |
+</code></pre>
+<h5 id="存储结构-1"><a href="#存储结构-1" class="headerlink" title="存储结构"></a>存储结构</h5><pre><code class="hljs">     本质上是线性表
+     数组实现：栈顶在数组后方
+     链表实现：栈顶在链表头部
+</code></pre>
+<h5 id="运算-1"><a href="#运算-1" class="headerlink" title="运算"></a>运算</h5><pre><code class="hljs">     | 操作     | 说明  |
+     | Push   | 入栈  |
+     | Pop    | 出栈  |
+     | GetTop | 取栈顶 |
+     | Empty  | 判空  |
+</code></pre>
+<h4 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h4><h5 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">     先进先出
+     | 名称          | 含义      |
+     | 队头（Front）   | 删除元素的一端 |
+     | 队尾（Rear）    | 插入元素的一端 |
+     | 入队（EnQueue） | 向队尾插入元素 |
+     | 出队（DeQueue） | 删除队头元素  |
+     只能队尾插入、队头删除
+</code></pre>
+<h5 id="存储结构-2"><a href="#存储结构-2" class="headerlink" title="存储结构"></a>存储结构</h5><pre><code class="hljs">     顺序存储：
+        使用数组实现队列
+        front指针指向队头
+        rear指针指向队尾后一个位置
+        循环队列：
+           解决假溢出问题，把数组看成首尾相连的环
+           循环队列入队，队尾移动公式rear=(rear+1)%MaxSize
+           循环队列出队，队头移动公式front=(front+1)%MaxSize
+           队空条件front==rear
+           队满条件，为了避免队空和队满的判断冲突，永远少用一个存储单元，使得(rear+1)%MaxSize==front
+           循环队列元素个数，(rear-front+MaxSize)%MaxSize
+     链队列：
+        使用链表实现队列
+        front指针指向队头
+        rear指针指向队尾
+        入队：新节点插入尾部，rear-&gt;next=新节点;rear=新节点
+        出队：删除头结点，front=front-&gt;next
+        队空情况：front==rear
+</code></pre>
+<h5 id="运算-2"><a href="#运算-2" class="headerlink" title="运算"></a>运算</h5><pre><code class="hljs">     | 运算        | 作用   |
+     | InitQueue | 初始化  |
+     | EnQueue   | 入队   |
+     | DeQueue   | 出队   |
+     | GetHead   | 读取队头 |
+     | IsEmpty   | 判空   |
+</code></pre>
+<h4 id="串"><a href="#串" class="headerlink" title="串"></a>串</h4><h5 id="串的定义"><a href="#串的定义" class="headerlink" title="串的定义"></a>串的定义</h5><pre><code class="hljs">     由0个或多个字符组成的有限序列，字符的个数叫做串长，空串是没有任何字符的串
+</code></pre>
+<h5 id="存储结构-3"><a href="#存储结构-3" class="headerlink" title="存储结构"></a>存储结构</h5><pre><code class="hljs">     串本质上是特殊的线性表
+     顺序存储：
+        char s[] = &quot;hello&quot;;
+        +---+---+---+---+---+---+
+        | h | e | l | l | o | \0|
+        +---+---+---+---+---+---+
+</code></pre>
+<h5 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h5><pre><code class="hljs">     主串：&quot;abababc&quot;
+     模式串：&quot;ababc&quot;
+     模式串在主串中的第三个字符处出现
+     匹配算法：
+        暴力匹配/BF算法/朴素匹配：一个一个字符匹配，不匹配就回退
+        KMP算法：匹配失败时主串不退回，利用已匹配的信息避免重复比较。
+           next数组:当前位置以及前面，最大相同前后缀长度
+           前缀：字符串abcd，前缀a、ab、abc
+           后缀：字符串abcd，后缀d、cd、bcd
+</code></pre>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h4><pre><code class="hljs">  数组（Array）是一种线性数据结构，用于存储一组“相同类型”的数据。
+  元素类型相同
+  元素按顺序排列
+  每个元素都有唯一的下标（索引）
+  可以通过下标快速访问元素
+</code></pre>
+<h4 id="数组的存储"><a href="#数组的存储" class="headerlink" title="数组的存储"></a>数组的存储</h4><h4 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h4><h4 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a>数组的运算</h4><pre><code class="hljs">  | 运算 | 说明    |
+  | 访问 | 获取元素  |
+  | 查找 | 查找某值  |
+  | 插入 | 添加元素  |
+  | 删除 | 删除元素  |
+  | 修改 | 改变元素值 |
+  | 排序 | 调整顺序  |
+  | 合并 | 两数组组合 |
+</code></pre>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="矩阵的定义"><a href="#矩阵的定义" class="headerlink" title="矩阵的定义"></a>矩阵的定义</h4><pre><code class="hljs">  二维数组
+</code></pre>
+<h4 id="矩阵的存储"><a href="#矩阵的存储" class="headerlink" title="矩阵的存储"></a>矩阵的存储</h4><h4 id="矩阵的遍历"><a href="#矩阵的遍历" class="headerlink" title="矩阵的遍历"></a>矩阵的遍历</h4><h4 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h4><h4 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h4><pre><code class="hljs">  矩阵中大部分元素为0
+  用三元法表示非0位置，(行，列，值)
+  十字链表
+</code></pre>
+<h3 id="广义表"><a href="#广义表" class="headerlink" title="广义表"></a>广义表</h3><h4 id="广义表的定义以及特点"><a href="#广义表的定义以及特点" class="headerlink" title="广义表的定义以及特点"></a>广义表的定义以及特点</h4><h4 id="广义表的存储"><a href="#广义表的存储" class="headerlink" title="广义表的存储"></a>广义表的存储</h4><h4 id="广义表的操作"><a href="#广义表的操作" class="headerlink" title="广义表的操作"></a>广义表的操作</h4><h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><h4 id="树的定义和内容"><a href="#树的定义和内容" class="headerlink" title="树的定义和内容"></a>树的定义和内容</h4><pre><code class="hljs">  组成：
+     一个根节点
+     若干子节点
+     节点之间层次关系
+     不能有回路
+  叶子节点：终端节点，没有孩子节点
+  分支节点：有孩子的节点
+  节点的度：该节点拥有的子节点数量
+  树的度：整棵树中节点度的最大值
+  层次：根节点为第一层
+  树的高度(深度)：树的层数
+  路径：从一个节点到另一个节点的序列
+</code></pre>
+<h4 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h4><pre><code class="hljs">  双亲表示法：每个节点记录数据和父节点下标
+  孩子表示法：每个节点记录数据和所有孩子链表
+  孩子兄弟表示法/二叉链表表示法：每个节点记录数据、第一个孩子和下一个兄弟
+</code></pre>
+<h4 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h4><pre><code class="hljs">  按照某种顺序访问所有节点一次
+  先根遍历：先访问根再访问子树
+  后根遍历：先访问子树再访问根
+</code></pre>
+<h4 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h4><h4 id="二叉树定义和性质"><a href="#二叉树定义和性质" class="headerlink" title="二叉树定义和性质"></a>二叉树定义和性质</h4><pre><code class="hljs">     每个节点最多只有两个孩子的树
+     叶子节点数=度为2节点数+1
+     特殊二叉树：
+        满二叉树：每层都满节点
+        完全二叉树：除了最后一层从右向左排列，其余层全满节点
+</code></pre>
+<h4 id="二叉树存储结构"><a href="#二叉树存储结构" class="headerlink" title="二叉树存储结构"></a>二叉树存储结构</h4><pre><code class="hljs">     顺序存储：用数组存储
+     链式存储
+</code></pre>
+<h4 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h4><pre><code class="hljs">     借助队列实现遍历
+     前序遍历：根左右
+     中序遍历：左根右
+     后续遍历：左右根
+     层序遍历：按层访问
+</code></pre>
+<h4 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h4><h5 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">        解决普通二叉树中空指针浪费，利用空指针保存前驱和后继
+</code></pre>
+<h5 id="建立线索二叉树"><a href="#建立线索二叉树" class="headerlink" title="建立线索二叉树"></a>建立线索二叉树</h5><pre><code class="hljs">        遍历过程中，若左孩子为空，则指向前驱，若右孩子为空则指向后继
+        增加标志位，区分孩子还是线索
+</code></pre>
+<h5 id="访问线索二叉树"><a href="#访问线索二叉树" class="headerlink" title="访问线索二叉树"></a>访问线索二叉树</h5><h4 id="最优二叉树-哈夫曼树"><a href="#最优二叉树-哈夫曼树" class="headerlink" title="最优二叉树(哈夫曼树)"></a>最优二叉树(哈夫曼树)</h4><h5 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">        带权路径长度最小的二叉树
+</code></pre>
+<h5 id="构造最优二叉树"><a href="#构造最优二叉树" class="headerlink" title="构造最优二叉树"></a>构造最优二叉树</h5><pre><code class="hljs">        每次选最小的两个节点合并最终得到树
+</code></pre>
+<h5 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h5><pre><code class="hljs">        左边0，右边1，从根到叶子节点，得到编码
+</code></pre>
+<h4 id="二叉排序树BST"><a href="#二叉排序树BST" class="headerlink" title="二叉排序树BST"></a>二叉排序树BST</h4><pre><code class="hljs">     普通二叉树查找慢，于是引入BST。利用大小关系查找
+     左&lt;根&lt;右
+</code></pre>
+<h4 id="平衡二叉树AVL"><a href="#平衡二叉树AVL" class="headerlink" title="平衡二叉树AVL"></a>平衡二叉树AVL</h4><pre><code class="hljs">     当数据有序时，BST会退化成链表，于是引入AVL强制保持二叉树平衡
+     任意节点左右高度差的绝对值不能大于1
+     通过旋转来维持平衡：
+        LL型：需要右旋
+        RR型：需要左旋
+        LR型：需要先左旋再右旋
+        RL型：需要先右旋再左旋
+</code></pre>
+<h4 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h4><pre><code class="hljs">     AVL过于严格，频繁插入删除会导致旋转过多，于是引入红黑树
+     允许轻微不平衡
+     规则：
+        每个节点都只能是红色或者黑色
+        根节点必须是黑色
+        红色节点不能连续
+        任一路径黑节点数相同
+</code></pre>
+<h4 id="森林"><a href="#森林" class="headerlink" title="森林"></a>森林</h4><h5 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">     多个互不相交树的集合
+</code></pre>
+<h5 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h5><pre><code class="hljs">     先序遍历森林：先访问第一课树根，再遍历子树，以此类推遍历剩下的树
+     中序遍历森林：转换为二叉树后进行遍历
+</code></pre>
+<h5 id="树、森林和二叉树的互相转换"><a href="#树、森林和二叉树的互相转换" class="headerlink" title="树、森林和二叉树的互相转换"></a>树、森林和二叉树的互相转换</h5><pre><code class="hljs">     树-&gt;二叉树：孩子兄弟法
+        兄弟相连
+        只保留第一个孩子连线
+        顺时针旋转45度
+     森林-&gt;二叉树：
+        每棵树转为二叉树
+        根节点之间连接兄弟关系
+     二叉树-&gt;树：
+        左孩子是第一个孩子，右孩子是下一个兄弟
+        
+</code></pre>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><h4 id="图的定义和内容"><a href="#图的定义和内容" class="headerlink" title="图的定义和内容"></a>图的定义和内容</h4><pre><code class="hljs">  组成：
+     顶点
+     边
+  种类：
+     无向图：边没有方向
+     有向图：边有方向
+     完全图：任意两个顶点之间都有边
+  顶点的度：
+     无向图：一个顶点连接多少边就有多少度
+     有向图：指向该顶点的边的数量是入度，从该顶点指向其它顶点的边的数量是出度
+  路径：从一个顶点经过若干条边到另一个顶点，路径长度是边的数量
+  连通图：任意两个顶点都能互相到达的无向图
+  强连通图：任意两个顶点都能互相到达的有向图
+  子图：原图的一部分
+     
+</code></pre>
+<h4 id="图的存储"><a href="#图的存储" class="headerlink" title="图的存储"></a>图的存储</h4><pre><code class="hljs">  邻接矩阵：
+     用二维数组表示图
+     设有n个顶点，建立矩阵A[n][n]
+     无向图邻接矩阵，0表示无边，1表示有边
+     适合稠密图
+  邻接表：
+     类似链表，每个顶点记录连接的其它顶点
+     适合稀疏图
+</code></pre>
+<h4 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h4><pre><code class="hljs">  深度优先DFS：
+     一条路走到底
+     使用递归和栈实现
+  广度优先BFS：
+     一层一层扩散
+     使用队列实现
+</code></pre>
+<h4 id="生成树"><a href="#生成树" class="headerlink" title="生成树"></a>生成树</h4><h5 id="定义-6"><a href="#定义-6" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">     对于一个连通图，在保证所有点连通的情况下，删除一些边可以使环消失的图，叫做生成树
+     若有n个顶点，则有n-1的边
+</code></pre>
+<h5 id="最小生成树MST"><a href="#最小生成树MST" class="headerlink" title="最小生成树MST"></a>最小生成树MST</h5><pre><code class="hljs">     总权值最小的生成树
+     求解方法：
+        普利姆算法：
+           从任一个顶点出发，将该顶点加入集合
+           找该顶点最短边，将对应的顶点加入集合
+           从集合向外看其他边，找出最小边，将对应顶点加入集合
+           重复直至连通所有点
+        克鲁斯卡尔算法：
+           对边按权值排序
+           选出最短边，直至连通所有点
+</code></pre>
+<h4 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h4><h5 id="AOV网"><a href="#AOV网" class="headerlink" title="AOV网"></a>AOV网</h5><pre><code class="hljs">     顶点表示活动
+     边表示活动之间的先后关系
+     AOV是有向无环图DAG
+</code></pre>
+<h5 id="拓扑排序算法"><a href="#拓扑排序算法" class="headerlink" title="拓扑排序算法"></a>拓扑排序算法</h5><pre><code class="hljs">     为了得到一个合法的执行顺序
+     步骤：
+        找入度为0的顶点
+        输出该顶点
+        删除相关的边
+        重复
+     如果最后还有顶点未输出，则说明有环，无法拓扑排序
+</code></pre>
+<h5 id="AOE网"><a href="#AOE网" class="headerlink" title="AOE网"></a>AOE网</h5><pre><code class="hljs">     边表示活动
+     顶点表示事件
+</code></pre>
+<h4 id="关键路径"><a href="#关键路径" class="headerlink" title="关键路径"></a>关键路径</h4><pre><code class="hljs">  耗时最长的路径，决定整个工程完成的时间
+</code></pre>
+<h4 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h4><pre><code class="hljs">  两个顶点之间最短路线
+</code></pre>
+<h5 id="单源点最短路径"><a href="#单源点最短路径" class="headerlink" title="单源点最短路径"></a>单源点最短路径</h5><pre><code class="hljs">     从一个顶点出发，到其他所有顶点各自最短路径
+     Dijkstra算法：
+        适合无负权边
+        从起始顶点开始，初始化所有直接连接的顶点
+        找到最近的点，利用这个点更新最短路径
+        不断重复
+</code></pre>
+<h5 id="每对顶点间的最短路径"><a href="#每对顶点间的最短路径" class="headerlink" title="每对顶点间的最短路径"></a>每对顶点间的最短路径</h5><pre><code class="hljs">     任意两点之间最短路径
+     Floyd算法：
+        动态规划
+        尝试如果经过其他路径是否会更短
+</code></pre>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><h4 id="查找的定义"><a href="#查找的定义" class="headerlink" title="查找的定义"></a>查找的定义</h4><pre><code class="hljs">  在一个数据集合中，寻找某个指定的数据元素
+  平均查找长度ASL：查找过程中，平均需要比较的次数
+</code></pre>
+<h4 id="静态查找表"><a href="#静态查找表" class="headerlink" title="静态查找表"></a>静态查找表</h4><pre><code class="hljs">  查找过程中，不修改原数据集合
+</code></pre>
+<h5 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h5><pre><code class="hljs">     从头到尾依次比较
+</code></pre>
+<h5 id="折半查找-二分查找"><a href="#折半查找-二分查找" class="headerlink" title="折半查找&#x2F;二分查找"></a>折半查找&#x2F;二分查找</h5><pre><code class="hljs">     如果数据集合有序，每次取中间元素比较，决定留下哪一边，不断缩小范围
+</code></pre>
+<h5 id="分块查找-索引顺序查找"><a href="#分块查找-索引顺序查找" class="headerlink" title="分块查找&#x2F;索引顺序查找"></a>分块查找&#x2F;索引顺序查找</h5><pre><code class="hljs">     顺序查找和二分查找的结合
+     首先把数据分块，每块建立索引
+     步骤：
+        查索引，确定元素所在的块
+        在块内顺序查找
+</code></pre>
+<h4 id="动态查找表"><a href="#动态查找表" class="headerlink" title="动态查找表"></a>动态查找表</h4><pre><code class="hljs">  查找过程中允许修改原数据集合
+</code></pre>
+<h5 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h5><pre><code class="hljs">     左子树 &lt; 根节点 &lt; 右子树
+     中序遍历结果从小到大有序
+     插入时小的放左边，大的放右边
+     删除时三种情况：
+        删除叶子节点：直接删除
+        删除只有一个孩子的节点：让孩子代替自己
+        删除有两个孩子的节点：用前驱或后继替换
+</code></pre>
+<h5 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h5><h5 id="B-树"><a href="#B-树" class="headerlink" title="B_树"></a>B_树</h5><pre><code class="hljs">     磁盘输入输出慢，二叉树层数高，因此引入B树，一个节点可以存多个关键字，B树的高度很低。B树不是二叉树。
+     m阶B树：一个节点最多m个孩子，最少m/2个孩子
+</code></pre>
+<h4 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h4><h5 id="定义-7"><a href="#定义-7" class="headerlink" title="定义"></a>定义</h5><pre><code class="hljs">     根据关键字直接计算存储位置
+     位置=哈希函数(关键字)
+</code></pre>
+<h5 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h5><pre><code class="hljs">     把关键字转换成数组下标
+     方法：
+        直接定址法：关键字直接作为下标
+        除留余数法：H(key)=key % p
+        数字分析法：分析数字特征
+        平方取中法：平方后取中间几位
+</code></pre>
+<h5 id="冲突处理"><a href="#冲突处理" class="headerlink" title="冲突处理"></a>冲突处理</h5><pre><code class="hljs">     当不同关键字得到同一地址，这就叫做冲突
+     处理方法：
+        开放定址法：冲突后继续寻找空位置
+        链地址法：冲突的位置挂链表，将冲突的数据用链表连起来
+</code></pre>
+<h5 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h5><pre><code class="hljs">     步骤：
+        计算哈希地址
+        如果冲突，则按冲突规则继续找
+     装填因子α=已存元素个数/哈希表长度。描述哈希表装了多少数据的程度
+</code></pre>
+<h3 id="内部排序"><a href="#内部排序" class="headerlink" title="内部排序"></a>内部排序</h3><p>   排序过程中所有数据都在内存中</p>
+<h4 id="排序的定义和内容"><a href="#排序的定义和内容" class="headerlink" title="排序的定义和内容"></a>排序的定义和内容</h4><pre><code class="hljs">  将一组无序的数据元素，按照某种规则，调整有序的过程
+  稳定排序：如果两个元素值相同，排序后保证它们原来的先后顺序不变，则称该算法是稳定的
+</code></pre>
+<h4 id="简单排序"><a href="#简单排序" class="headerlink" title="简单排序"></a>简单排序</h4><h5 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h5><pre><code class="hljs">     每次从无序区取一个元素插入到已经有序的位置
+     | 项目    | 内容    |
+     | 时间复杂度 | O(n²) |
+     | 最好情况  | O(n)  |
+     | 空间复杂度 | O(1)  |
+     | 稳定性   | 稳定    |
+</code></pre>
+<h5 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h5><pre><code class="hljs">     相邻元素比较，大的向后移动
+     | 项目    | 内容    |
+     | ----- | ----- |
+     | 时间复杂度 | O(n²) |
+     | 最好情况  | O(n)  |
+     | 空间复杂度 | O(1)  |
+     | 稳定性   | 稳定    |
+</code></pre>
+<h5 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h5><pre><code class="hljs">     每次从未排序部分选择最小的元素放到前面
+     | 项目    | 内容    |
+     | ----- | ----- |
+     | 时间复杂度 | O(n²) |
+     | 空间复杂度 | O(1)  |
+     | 稳定性   | 不稳定   |
+</code></pre>
+<h4 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h4><pre><code class="hljs">  改进版插入排序。先让元素大跨度移动，再逐渐缩小间隔。设置初始gap，对相隔gap的元素进行插入排序，然后缩小gap，继续对相隔gap的元素进行插入排序，重复以上直至gap=1,此时进行插入排序后的结果就是有序数组
+  | 项目    | 内容                  |
+  | ----- | ------------------- |
+  | 时间复杂度 | 一般 O(n^1.3) ~ O(n²) |
+  | 空间复杂度 | O(1)                |
+  | 稳定性   | 不稳定                 |
+</code></pre>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><pre><code class="hljs">  分治法。
+  步骤：
+     选择基准
+     基准左侧大于基准的移到右侧
+     基准右侧小于基准的移到左侧
+     这样基准就会在最终正确的位置上
+     对左右递归排序
+  | 项目      | 内容       |
+  | ------- | -------- |
+  | 平均时间复杂度 | O(nlogn) |
+  | 最坏时间复杂度 | O(n²)    |
+  | 空间复杂度   | O(logn)  |
+  | 稳定性     | 不稳定      |
+</code></pre>
+<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><pre><code class="hljs">  堆是一种完全二叉树
+  大顶堆：父节点&gt;=子节点
+  小顶堆：父节点&lt;=子节点
+  使用大顶堆进行升序排序
+  步骤：
+     建大顶堆
+     堆顶放到数组最后
+     剩余元素重新调整成大顶堆
+     重复
+  | 项目    | 内容       |
+  | ----- | -------- |
+  | 时间复杂度 | O(nlogn) |
+  | 空间复杂度 | O(1)     |
+  | 稳定性   | 不稳定      |
+</code></pre>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><pre><code class="hljs">  分治法。
+  步骤：
+     不断拆分
+     分别排序
+     合并有序序列
+  | 项目    | 内容       |
+  | ----- | -------- |
+  | 时间复杂度 | O(nlog2n) |
+  | 空间复杂度 | O(n)     |
+  | 稳定性   | 稳定       |
+</code></pre>
+<h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4><pre><code class="hljs">  先按各位排序，再按十位排序，再百位排序等等
+  | 项目    | 内容        |
+  | ----- | --------- |
+  | 时间复杂度 | O(d(n+r)) |
+  | 空间复杂度 | O(r)      |
+  | 稳定性   | 稳定        |
+
+  | 参数 | 含义 |
+  | -- | -- |
+  | d  | 位数 |
+  | r  | 基数 |
+</code></pre>
+<h4 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h4><pre><code class="hljs">  在数字范围很小的情况下，通过统计每个数字出现的次数，从而直接给出最终排序结果
+  时间复杂度O(n+k)
+  空间复杂度O(k)
+  不稳定
+</code></pre>
+<h3 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h3><p>   数据过大，在内存中放不下，由内存和外存共同完成排序<br>   分块+归并<br>   步骤：<br>      把大文件拆成小块，每个小块单独内部排序<br>      把多个有序小文件逐步合并</p>
+<h2 id="算法基础"><a href="#算法基础" class="headerlink" title="算法基础"></a>算法基础</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><p>   算法指对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作<br>   特点：<br>      有穷性：任何算法对于任何合法输入都在执行有穷步后结束，且每一步都在有穷时间内完成<br>      确定性：算法中每一条指令都必须有确切含义，不能出现二义性。并且对于相同输入只能得到相同输出<br>      可行性：算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现<br>      输入：一个算法有0个或多个输入<br>      输出：一个算法有一个或多个输出</p>
+<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>   求解一个问题时经常会有多种算法可以选择，依据正确性、可靠性、简单性、易理解性选择最优。<br>   算法复杂度：<br>      时间复杂度：<br>         最佳情况：<br>         平均情况：<br>         最坏情况：<br>         渐进符号：<br>            O记号：最坏情况下的上界。例如2n+3，记作O(n)；n2+2n，记作O(n2)<br>            Ω记号：下界<br>            Θ记号：上下界相同<br>         递归式：<br>            递归形式：<br>            非递归形式：<br>         | 复杂度      | 名称    | 效率  |<br>         | ———- | ——- | —– |<br>         | O(1)       | 常数级   | 非常快 |<br>         | O(log n)   | 对数级   | 很快  |<br>         | O(n)       | 线性级   | 一般  |<br>         | O(n log n) | 线性对数级 | 很优秀 |<br>         | O(n²)      | 平方级   | 较慢  |<br>         | O(n³)      | 立方级   | 很慢  |<br>         | O(2ⁿ)      | 指数级   | 极慢  |<br>         | O(n!)      | 阶乘级   | 灾难级 |<br>         计算规则：<br>            对于多个部分，时间复杂度取最大项<br>            嵌套循环，复杂度相乘<br>            忽略常数<br>            忽略低阶项，取最大阶<br>      空间复杂度：<br>         O(1)：只用了常数个固定变量<br>         O(n)：申请了和n相关的空间</p>
+<h3 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h3><p>   步骤：<br>      把问题分解成子问题<br>      递归的求解子问题<br>      把子问题的解合并成原问题的解</p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>   保存重复计算的结果，以后直接用<br>   核心条件：<br>      大问题的最优解能由小问题得到<br>      很多子问题会反复出现<br>   步骤：<br>      定义状态dp[i]表示的是什么<br>      写状态转移方程，即当前状态怎么由以前状态得到<br>      初始化dp[]<br>      计算顺序<br>   例子：爬楼梯，每次走一阶或两阶，从第一阶到第n阶有多少种方法<br>   解：到第n阶可以从n-1阶走一步，或者从n-2阶走两步，所以公式：dp[n]&#x3D;dp[n-1]+dp[n-2]</p>
+<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><p>   每一步都选择当前看起来最好的。并且贪心不一定正确</p>
+<h3 id="回溯"><a href="#回溯" class="headerlink" title="回溯"></a>回溯</h3><p>   本质是深度优先搜索DFS<br>   回溯的代码模板：<br>      void dfs()<br>   {<br>       if(满足条件)<br>       {<br>           输出答案;<br>           return;<br>       }</p>
+<pre><code class="hljs">   for(所有选择)
+   {
+       做选择;
+
+       dfs();
+
+       撤销选择;
+   }
+</code></pre>
+<p>   }</p>
+<h3 id="分支限界"><a href="#分支限界" class="headerlink" title="分支限界"></a>分支限界</h3><p>   与回溯类似，但是会提前去除不可能更优的分支，目标找出最优解</p>
+<h3 id="概率算法"><a href="#概率算法" class="headerlink" title="概率算法"></a>概率算法</h3><p>   利用随机数解决问题</p>
+<h3 id="近似算法"><a href="#近似算法" class="headerlink" title="近似算法"></a>近似算法</h3><p>   难以求解最优，求接近最优的</p>
+<h3 id="数据挖掘算法"><a href="#数据挖掘算法" class="headerlink" title="数据挖掘算法"></a>数据挖掘算法</h3><p>   从大量数据中发现规律</p>
+<h3 id="智能优化算法"><a href="#智能优化算法" class="headerlink" title="智能优化算法"></a>智能优化算法</h3><p>   人工智能优化，模拟自然规律</p>
+<h2 id="软件工程开发"><a href="#软件工程开发" class="headerlink" title="软件工程开发"></a>软件工程开发</h2><h3 id="软件工程基本原理"><a href="#软件工程基本原理" class="headerlink" title="软件工程基本原理"></a>软件工程基本原理</h3><h4 id="软件生存周期"><a href="#软件生存周期" class="headerlink" title="软件生存周期"></a>软件生存周期</h4><pre><code class="hljs">  可行性分析与项目开发计划
+  需求分析
+  概要设计
+  详细设计
+  编码
+  测试
+  维护
+</code></pre>
+<h4 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h4><pre><code class="hljs">  能力成熟度模型CMM：
+  初始级
+  可重复级
+  已定义级
+  已管理级
+  优化级
+
+  能力成熟度模型集成CMMI：
+  阶段式模型：强调整个组织统一升级
+     初始的
+     已管理的
+     已定义的
+     定量管理的
+     优化的
+  连续式模型：针对某个过程单独提高能力，不同领域能力等级可以不同
+     CL0未完成级
+     CL1已执行级
+     CL2已管理级
+     CL3已定义级
+     CL4定量管理级
+     CL5优化级
+  用分阶段的生命周期计划严格管理
+  坚持进行阶段评审
+  实现严格的产品控制
+  采用现代程序设计技术
+  结果应能清楚地审查
+  开发小组的人员应少而精
+  承认不断改进软件工程实践的必要性
+</code></pre>
+<h5 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h5><pre><code class="hljs">     需求分析-&gt;概要设计-&gt;详细设计-&gt;编码-&gt;测试-&gt;维护
+     阶段严格顺序执行，强调文档
+     管理容易
+     不适合需求变化
+</code></pre>
+<h5 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h5><pre><code class="hljs">     分批开发，每次交付可运行版本
+     风险降低，用户反馈快，灵活
+     架构混乱，集成复杂
+</code></pre>
+<h5 id="原型模型"><a href="#原型模型" class="headerlink" title="原型模型"></a>原型模型</h5><pre><code class="hljs">     当客户不清楚需求时，快速完成样品提供给客户
+     客户深度参与，解决客户需求不明确问题
+     修改量大，工期失控
+</code></pre>
+<h5 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h5><pre><code class="hljs">     风险驱动，优先解决风险最大部分
+     风险控制能力强
+     成本高，管理复杂
+</code></pre>
+<h5 id="喷泉模型"><a href="#喷泉模型" class="headerlink" title="喷泉模型"></a>喷泉模型</h5><pre><code class="hljs">     面向对象开发，交叉开发
+</code></pre>
+<h5 id="基于构件的开发模型"><a href="#基于构件的开发模型" class="headerlink" title="基于构件的开发模型"></a>基于构件的开发模型</h5><pre><code class="hljs">     不要重复造轮子，使用已有的模块直接搭建
+     开发速度快
+     不同构件可能不兼容
+</code></pre>
+<h5 id="形式化方法模型"><a href="#形式化方法模型" class="headerlink" title="形式化方法模型"></a>形式化方法模型</h5><pre><code class="hljs">     使用数学开发软件，用数学语言描述系统
+     及其严谨
+     难度极高，成本极高
+</code></pre>
+<h5 id="统一过程模型"><a href="#统一过程模型" class="headerlink" title="统一过程模型"></a>统一过程模型</h5><pre><code class="hljs">     用例驱动，架构中心，迭代开发
+     确定项目-&gt;建立架构-&gt;编码开发-&gt;发布交付
+     
+</code></pre>
+<h5 id="敏捷方法"><a href="#敏捷方法" class="headerlink" title="敏捷方法"></a>敏捷方法</h5><pre><code class="hljs">     快速响应，快速迭代，用户参与，持续交付，变化优先
+     极限编程：结对编程，一个写一个检查；测试驱动开发，先写测试在写代码；持续集成，代码频繁合并
+     水晶法：不同项目像不同颜色不同硬度的水晶一样。每个项目由不同的开发方法，注重人与人的沟通协 作
+     自适应软件开发：持续适应变化。猜测，协作，学习。
+    
+</code></pre>
+<h4 id="软件架构设计"><a href="#软件架构设计" class="headerlink" title="软件架构设计"></a>软件架构设计</h4><pre><code class="hljs">  分层架构：表现层-&gt;业务层-&gt;数据访问层-&gt;数据库。结构清晰，易维护，易协作。层数多导致性能降低。
+  客户机/服务器(C/S)：客户端&lt;-&gt;服务器。客户端安装软件，客户端可分担计算，性能高，交互体验好。跨平台开发困难，升级麻烦。
+  浏览器/服务器(B/S)：浏览器&lt;-&gt;服务器。用户不需要安装客户端，浏览器直接访问，易维护，可跨平台，开发成本低。浏览器性能有限。
+  管道-过滤器：数据像流水一样。输入-&gt;过滤器-&gt;输出。每个过滤器只做一件事，易组合易复用易拓展。不适合复杂系统。
+  事件驱动EDA：通过事件通信。耦合度低高扩展高并发适合互联网。调试困难数据难一致。
+  MVC架构:View-&gt;Controller-&gt;Model，把数据、界面、业务分离。耦合低，易维护，易拓展
+  微服务架构：把系统拆分成多个独立小服务。每个服务单独部署。技术自由，故障隔离，现代互联网最核心架构。分布式问题复杂。
+  SOA架构：面向服务架构。与微服务类似但是通常面向企业级服务，服务量级大
+  插件式结构：核心系统+插件扩展。
+  分布式架构：多个机器共同完成系统工作
+  云原生架构：适用于云环境。容器化，自动伸缩，微服务化，DevOps
+  主从架构:主数据库-&gt;多个从数据库
+  集群架构：多台服务器共同提供服务
+</code></pre>
+<h4 id="软件项目管理"><a href="#软件项目管理" class="headerlink" title="软件项目管理"></a>软件项目管理</h4><pre><code class="hljs">  4P：人员、产品、过程、项目
+</code></pre>
+<h5 id="项目估算"><a href="#项目估算" class="headerlink" title="项目估算"></a>项目估算</h5><pre><code class="hljs">     自顶向下估算
+     自底向上估算
+     差别估算
+     专家估算
+     类推估算
+     算式估算：
+        COCOMO估算模型：
+        基本
+        中级
+        详细
+        COCOMOⅡ估算模型：
+        应用组装
+        早期设计阶段
+        体系结构阶段
+        Putnam估算模型：
+        基于瑞利曲线。
+        公式：
+</code></pre>
+<h5 id="进度管理"><a href="#进度管理" class="headerlink" title="进度管理"></a>进度管理</h5><pre><code class="hljs">     Gantt图
+     PERT图
+     关键路径
+     松弛时间
+  
+</code></pre>
+<h4 id="软件工具"><a href="#软件工具" class="headerlink" title="软件工具"></a>软件工具</h4><h4 id="软件开发环境"><a href="#软件开发环境" class="headerlink" title="软件开发环境"></a>软件开发环境</h4><h4 id="软件开发文档"><a href="#软件开发文档" class="headerlink" title="软件开发文档"></a>软件开发文档</h4><pre><code class="hljs">  可行性研究报告
+  总体规划报告
+  系统开发合同
+  系统方案说明书
+
+  工作任务分解表
+  PERT图
+  Gantt图
+  预算分配表
+  需提供开发月报
+  系统开发总结报告
+
+  系统测试计划
+
+  用户手册
+  操作指南
+
+  技术报告
+  技术手册
+  研制报告
+
+  系统运行报告
+  维护建议报告
+</code></pre>
+<h3 id="系统分析"><a href="#系统分析" class="headerlink" title="系统分析"></a>系统分析</h3><h4 id="结构化分析"><a href="#结构化分析" class="headerlink" title="结构化分析"></a>结构化分析</h4><pre><code class="hljs">  结构化分析的总体思想：自顶向下、逐层分解，功能的分解与抽象
+  适合数据处理项目，不适合大规模、复杂且需求变化的项目
+  系统分析过程：
+     认识、理解当前显示环境，得到当前系统的物理模型
+     从当前物理模型抽象出逻辑模型
+     对当前系统的逻辑模型进行优化，建立目标系统的逻辑模型
+     将目标系统的逻辑模型转换成物理模型
+
+  结构化分析的结果：
+     分层的数据流图：
+        外部实体
+        加工
+        数据存储
+        数据流：
+           与
+           或
+           互斥
+        层次结构：
+           顶层图
+           0层图
+           中间图
+           底层图
+        审查 ：
+           一致性：数据流图的上下层必须严格对应
+           完整性：加工必须同时有输入和输出
+           构造分层时的问题：黑洞、奇迹、灰洞
+     数据字典：
+        内容：
+           符号：
+              定义
+              与
+              或
+              重复
+              可选
+              基本数据元素
+              连接
+           数据存储条目
+           数据项条目
+           基本加工条目
+        加工逻辑：
+           结构化语言：
+              顺序结构
+              选择结构
+              重复结构
+              判定表
+              判定树
+</code></pre>
+<h4 id="需求工程"><a href="#需求工程" class="headerlink" title="需求工程"></a>需求工程</h4><pre><code class="hljs">  需求分析原则：
+     必须能表示和理解问题的信息域
+     必须能定义软件需要完成的任务
+     必须能表示软件的行为
+     必须划分描述数据、功能和行为的模型，分层次的揭示细节
+     从要素信息到细节信息
+  需求工程6阶段：
+     需求获取
+     需求分析与协商
+     系统建模
+     需求规约
+     需求验证
+     需求管理
+</code></pre>
+<h4 id="面向对象分析"><a href="#面向对象分析" class="headerlink" title="面向对象分析"></a>面向对象分析</h4><pre><code class="hljs">  4个步骤：
+     建模系统功能：确定参与者、确定需求用例、构造用例模型、记录需求用例描述、用例活动
+     定义领域模型：确定业务对象、组织对象并记录对象之间的关系
+     定义交互、行为、状态：
+     定义设计类图
+</code></pre>
+<h3 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h3><h4 id="系统设计原理"><a href="#系统设计原理" class="headerlink" title="系统设计原理"></a>系统设计原理</h4><pre><code class="hljs">  抽象
+  模块化
+  信息隐蔽：模块内部实现细节不让外部知道，为外部只能通过接口访问
+  模块独立：
+     耦合性：模块之间依赖程度，耦合越低越好
+        无直接耦合(理论最好)：模块之间完全无关系
+        数据耦合(实际最好)：模块之间只传递简单数据   
+        标记耦合：传递数据结构的一部分
+        控制耦合：一个模块传递控制信息给另一个模块
+        外部耦合：多个模块依赖相同外部环境
+        公共耦合：多个模块共享全局数据
+        内容耦合(最差)：一个模块能直接访问另一个模块内部内容
+     内聚性：模块内部各部分联系紧密程度，内聚越高越好
+        偶然内聚(最差)：模块内部功能毫无关系
+        逻辑内聚：逻辑相似功能放在一起
+        时间内聚：同一时间执行的操作放在一起
+        过程内聚：按照执行步骤组合，顺序相关
+        通信内聚：操作同一数据
+        顺序内聚：前一个输出是后一个输入，数据流连续
+        功能内聚(最好)：模块只完成一个明确的功能
+  软件设计原则：高内聚低耦合
+</code></pre>
+<h4 id="结构化设计"><a href="#结构化设计" class="headerlink" title="结构化设计"></a>结构化设计</h4><pre><code class="hljs">  将分析模型转换为软件结构
+  数据流图-&gt;结构图
+</code></pre>
+<h5 id="结构化设计的步骤"><a href="#结构化设计的步骤" class="headerlink" title="结构化设计的步骤"></a>结构化设计的步骤</h5><pre><code class="hljs">     建立初始结构图
+     对结构图的改进
+     书写设计文档
+     设计评审
+</code></pre>
+<h5 id="数据流图到软件体系结构映射"><a href="#数据流图到软件体系结构映射" class="headerlink" title="数据流图到软件体系结构映射"></a>数据流图到软件体系结构映射</h5><pre><code class="hljs">     将数据流图分类：
+        变换型数据流图：输入 → 加工变换 → 输出
+           首先确定输入流输出流，分离变换中心
+           第一级分解：划分输入模块、输出模块、变换模块
+           第二级分解：继续细化
+        事务性数据流图：一个输入引发不同处理路径，事务中心根据请求决定走哪条路径
+           确定事务中心和每条活动流的流特性
+           将事务流型数据流图映射成高层的程序结构
+           进一步分解
+           
+</code></pre>
+<h4 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计"></a>概要设计</h4><pre><code class="hljs">  设计软件总体结构，按功能将系统划分成模块。确定每个模块功能，每个模块之间的调用关系，模块之间的接口。
+  抽象的数据结构设计
+  抽象的数据库设计
+  编写概要设计文档
+</code></pre>
+<h4 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h4><pre><code class="hljs">  对每个模块进行详细算法设计
+  数据结构详细设计
+  数据库详细设计
+  代码设计、输入输出、界面设计
+  编写详细设计文档
+</code></pre>
+<h3 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h3><h4 id="系统测试与调试"><a href="#系统测试与调试" class="headerlink" title="系统测试与调试"></a>系统测试与调试</h4><pre><code class="hljs">  测试意义：保证质量、降低风险、提高用户满意度、降低维护成本
+  目的：发现错误、验证需求、提高可靠性
+  原则：
+     测试只能证明有错
+     尽早测试
+     错误群集现象（二八原则），80%的错误集中在20%的代码中
+     避免测试自己的程序
+     不可能穷举测试
+  测试过程：
+     需求分析
+     测试计划
+     测试设计
+     测试执行
+     缺陷分析
+     回归测试
+     测试报告
+</code></pre>
+<h4 id="传统软件的测试策略"><a href="#传统软件的测试策略" class="headerlink" title="传统软件的测试策略"></a>传统软件的测试策略</h4><pre><code class="hljs">  单元测试：
+     测试内容：
+        模块接口
+        局部数据结构
+        路径测试
+        错误处理
+     测试过程：
+        驱动模块(上层模块)
+        桩模块(下层模块)
+  集成测试：
+     自顶向下集成测试：从顶层模块逐步向下测试
+     自底向上集成测试：从底层模块逐步向上测试
+     回归测试：修改代码后重新测试原有功能
+     冒烟测试：基本功能快速检查
+  确认测试：
+     准则：软件是否满足用户需求
+     配置评审：检查软件配置是否完整，如文档、程序、数据、安装文件
+     α测试：用户在开发环境测试，由开发人员完成，内部测试
+     β测试：真实用户在实际环境测试，接近正式发布
+  系统测试：
+     恢复测试：系统崩溃后能否恢复
+     安全性测试：系统是否安全
+     压力测试：给系统极端压力观察是否崩溃
+     性能测试：检查响应时间、吞吐量、CPU占用等
+     部署测试：软件安装部署是否正常
+</code></pre>
+<h4 id="测试方法"><a href="#测试方法" class="headerlink" title="测试方法"></a>测试方法</h4><pre><code class="hljs">  静态测试：不运行程序，直接检查代码
+  动态测试：运行程序进行测试
+  黑盒测试：
+     等价类划分：将输入划分为有效等价类、无效等价类
+     边界值分析：错误最容易出现在边界。比如1~100，测试0 1 2 99 100 101
+     错误推测：依赖经验猜测错误
+     因果图：分析输入条件之间逻辑关系
+  白盒测试：
+     逻辑覆盖：
+        语句覆盖：每条语句至少执行一次
+        判定覆盖(分支覆盖)：每个判定的真假都执行
+        条件覆盖：每个条件都取过真假
+        判定/条件覆盖：同时满足判定覆盖和条件覆盖
+        条件组合覆盖：所有条件的组合都测试
+        循环覆盖：针对循环结构测试，0次、1次、多次、最大次
+        基本路径测试：找出程序独立路径
+        路径覆盖：所有路径都执行一次
+  
+</code></pre>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><pre><code class="hljs">  调试过程：
+     发现错误
+     定位错误
+     分析原因
+     修改代码
+     重新测试
+  调试方法：
+     试探法：经验猜测
+     回溯法：从错误位置反向追踪
+     对分查找法：二分缩小错误范围
+     归纳法：分析多个错误现象，总结规律
+     演绎法：根据理论逻辑推导错误原因
+  
+</code></pre>
+<h4 id="测试用例设计"><a href="#测试用例设计" class="headerlink" title="测试用例设计"></a>测试用例设计</h4><h3 id="运行和维护"><a href="#运行和维护" class="headerlink" title="运行和维护"></a>运行和维护</h3><h4 id="系统转换"><a href="#系统转换" class="headerlink" title="系统转换"></a>系统转换</h4><pre><code class="hljs">  旧系统向新系统切换的过程
+  直接转换：在某一时刻旧系统立即停止，新系统立刻启用
+  并行转换：新旧系统同时运行一段时间，确认新系统正确后，停止就系统
+  分段转换：逐步的部分替换
+</code></pre>
+<h4 id="系统维护"><a href="#系统维护" class="headerlink" title="系统维护"></a>系统维护</h4><h5 id="系统可维护性"><a href="#系统可维护性" class="headerlink" title="系统可维护性"></a>系统可维护性</h5><pre><code class="hljs">     评价指标
+     维护与软件文档
+     软件文档修改
+</code></pre>
+<h5 id="系统维护的内容以及类型"><a href="#系统维护的内容以及类型" class="headerlink" title="系统维护的内容以及类型"></a>系统维护的内容以及类型</h5><pre><code class="hljs">     硬件维护
+     软件维护
+     数据维护
+
+     改正性维护：修复错误
+     适应性维护：适应环境变化
+     完善性维护：改进功能或性能
+     预防性维护：提前预防未来问题
+</code></pre>
+<h4 id="系统评价"><a href="#系统评价" class="headerlink" title="系统评价"></a>系统评价</h4><h3 id="软件质量"><a href="#软件质量" class="headerlink" title="软件质量"></a>软件质量</h3><h4 id="软件度量"><a href="#软件度量" class="headerlink" title="软件度量"></a>软件度量</h4><pre><code class="hljs">  McCabe度量法(环路度量)
+  公式1：环路复杂度V(G)=E-N+2，E边数，N节点数
+  公式2：环路复杂度V(G)=P+1，P判定节点数
+</code></pre>
+<h4 id="软件质量特性"><a href="#软件质量特性" class="headerlink" title="软件质量特性"></a>软件质量特性</h4><h5 id="ISO-IEC-9126软件质量模型"><a href="#ISO-IEC-9126软件质量模型" class="headerlink" title="ISO&#x2F;IEC 9126软件质量模型"></a>ISO&#x2F;IEC 9126软件质量模型</h5><h6 id="功能性"><a href="#功能性" class="headerlink" title="功能性"></a>功能性</h6><pre><code class="hljs">        软件是否能完成需要的功能
+        适应性：适合用户需求
+        准确性：结果正确
+        互用性：不同系统之间能调用工作
+        依从性：符合标准、规范、法律
+        安全性：保护数据和系统
+</code></pre>
+<h6 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h6><pre><code class="hljs">        软件长期稳定运行的能力
+        成熟性：系统故障少
+        容错性：发生错误时仍能运行
+        易恢复性：故障后的恢复能力
+</code></pre>
+<h6 id="易使用性"><a href="#易使用性" class="headerlink" title="易使用性"></a>易使用性</h6><pre><code class="hljs">        易理解性：用户容易看懂
+        易学性：容易学习
+        易操作性：操作方便
+</code></pre>
+<h6 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h6><pre><code class="hljs">        软件运行时资源利用情况
+        时间特性：运行速度
+        资源特性：资源占用
+</code></pre>
+<h6 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h6><pre><code class="hljs">        软件后期修改和维护难度
+        易分析性：容易定位问题
+        易改变性：容易修改
+        稳定性：修改后不容易引发新错误
+        易测试性：修改后容易测试
+</code></pre>
+<h6 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h6><pre><code class="hljs">        软件更换运行平台是否容易
+        适应性：适应不同环境
+        易安装性：安装简单
+        一致性：符合平台规范
+        易替换性：容易替换旧系统
+</code></pre>
+<h5 id="Mc-Call软件质量模型"><a href="#Mc-Call软件质量模型" class="headerlink" title="Mc Call软件质量模型"></a>Mc Call软件质量模型</h5><pre><code class="hljs">     三层框架：
+        质量特性：用户能看到的质量
+        评价准则：如何评价特性
+        度量指标：具体数字
+</code></pre>
+<h4 id="软件复杂性"><a href="#软件复杂性" class="headerlink" title="软件复杂性"></a>软件复杂性</h4><pre><code class="hljs">  程序复杂性的参数：
+     规模
+     难度
+     结构
+     智能度
+</code></pre>
+<h4 id="软件评审"><a href="#软件评审" class="headerlink" title="软件评审"></a>软件评审</h4><h4 id="软件容错"><a href="#软件容错" class="headerlink" title="软件容错"></a>软件容错</h4><h3 id="WebApp开发"><a href="#WebApp开发" class="headerlink" title="WebApp开发"></a>WebApp开发</h3><h4 id="需求模型"><a href="#需求模型" class="headerlink" title="需求模型"></a>需求模型</h4><pre><code class="hljs">  内容模型
+  交互模型
+  功能模型
+  导航模型
+  配置模型
+</code></pre>
+<h4 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h4><pre><code class="hljs">  架构设计
+  构件设计
+  内容设计
+  导航设计
+</code></pre>
+<h3 id="用户界面设计"><a href="#用户界面设计" class="headerlink" title="用户界面设计"></a>用户界面设计</h3><h4 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h4><pre><code class="hljs">  用户操纵控制
+  减轻用户记忆负担
+  界面一致
+</code></pre>
+<h4 id="设计-1"><a href="#设计-1" class="headerlink" title="设计"></a>设计</h4><pre><code class="hljs">  用户界面设计模型
+</code></pre>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="基本概念-2"><a href="#基本概念-2" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="数据库与数据系统"><a href="#数据库与数据系统" class="headerlink" title="数据库与数据系统"></a>数据库与数据系统</h4><pre><code class="hljs">  数据库
+  硬件
+  软件
+  人员
+</code></pre>
+<h4 id="数据库管理系统功能"><a href="#数据库管理系统功能" class="headerlink" title="数据库管理系统功能"></a>数据库管理系统功能</h4><pre><code class="hljs">  数据定义
+  数据库操作
+  数据库运行管理
+  数据的组织、存储和管理
+  数据库的建立和维护
+  其它功能
+</code></pre>
+<h4 id="数据库管理系统特征以及分类"><a href="#数据库管理系统特征以及分类" class="headerlink" title="数据库管理系统特征以及分类"></a>数据库管理系统特征以及分类</h4><pre><code class="hljs">  特征：
+     数据结构化且统一管理
+     较高数据独立性
+     数据控制功能：
+     安全性
+     完整性
+     并发控制
+     故障恢复
+
+  分类：
+     关系数据库系统
+     面向对象数据库系统
+     对象关系数据库系统
+  
+</code></pre>
+<h4 id="数据库系统的体系结构"><a href="#数据库系统的体系结构" class="headerlink" title="数据库系统的体系结构"></a>数据库系统的体系结构</h4><pre><code class="hljs">  集中式数据库系统
+  客户端/服务器结构
+  并行数据库系统
+  分布式数据库系统:
+     逻辑透明:隐藏数据库被分布
+     位置透明：用户不知道数据存在于哪个服务器
+     分片透明：隐藏表被分开
+     复制透明：同一份数据保存多份
+</code></pre>
+<h4 id="数据库三级模式结构"><a href="#数据库三级模式结构" class="headerlink" title="数据库三级模式结构"></a>数据库三级模式结构</h4><pre><code class="hljs">  概念模式
+  外模式
+  内模式
+  两级映像
+</code></pre>
+<h4 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a>大数据</h4><pre><code class="hljs">  大数据产生原因：互联网时代数据爆炸，传统数据库无法处理
+  大数据特征4V：
+     大量
+     高速
+     多样
+     价值密度低
+  理解大数据：大数据不是数据大，而是传统方式无法高效处理，因此需要分布式存储，并行计算，云计算等等
+  安全风险：隐私泄露、数据滥用、网络攻击
+</code></pre>
+<h3 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h3><h4 id="基本概念-3"><a href="#基本概念-3" class="headerlink" title="基本概念"></a>基本概念</h4><pre><code class="hljs">  概念数据模型：面向用户与现实世界的模型
+  基本数据模型：用于数据库内部组织数据的模型。
+</code></pre>
+<h4 id="三要素"><a href="#三要素" class="headerlink" title="三要素"></a>三要素</h4><pre><code class="hljs">  数据结构
+  数据操作
+  约束条件
+</code></pre>
+<h4 id="E-R模型"><a href="#E-R模型" class="headerlink" title="E-R模型"></a>E-R模型</h4><pre><code class="hljs">  实体
+  联系
+  属性
+  实体-联系方法
+  扩充的E-R模型：
+     弱实体：依赖于其它实体的实体，无法独立存在
+     特殊化：继承父类属性的子类
+     普遍化：从多个具体实体抽象出共同父类
+</code></pre>
+<h4 id="数据模型分类"><a href="#数据模型分类" class="headerlink" title="数据模型分类"></a>数据模型分类</h4><pre><code class="hljs">  层次模型：用树形结构组织数据，每个节点只能有一个父节点
+  网状模型：用图结构组织数据，应该节点可以有多个父节点
+  关系模型：用二维表表示数据
+  面向对象模型
+</code></pre>
+<h3 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h3><h4 id="基本概念-4"><a href="#基本概念-4" class="headerlink" title="基本概念"></a>基本概念</h4><pre><code class="hljs">  属性：表中的列头
+  域：属性允许的取指范围
+
+  笛卡尔积：两个集合的所有可能组合
+  关系：笛卡尔积中的有意义子集
+
+  关系的相关名词：
+  目或度：属性的个数
+  元组：表中的一行
+  候选码：能唯一标识元组的属性集合
+  主码：从候选码中选出来的主要标识
+  主属性：属于候选码中的属性
+  外码：一个表中引用另一个表主码的属性
+  全码：所有属性组合起来才能唯一标识
+
+  三种关系：
+  基本关系
+  查询表
+  视图表
+
+  关系数据库模式：数据库结构定义
+
+  完整性约束：
+  实体完整性：主码不能为空
+  引用完整性：外码必须引用存在的数据
+  用户定义完整性：用户定义规则
+
+  关系运算：
+  关系代数语言
+  关系演算语言
+  
+</code></pre>
+<h4 id="5种关系代数运算"><a href="#5种关系代数运算" class="headerlink" title="5种关系代数运算"></a>5种关系代数运算</h4><pre><code class="hljs">  并U：合并两个关系的数据，自动去重列数相同，属性类型相同
+  差-：R-S在R中存在但不在S中的数据
+  广义笛卡尔积×：两个关系的所有组合
+  投影π：选择列，π姓名(Student)
+  选择σ：选择行，σ年龄&gt;18(Student)
+</code></pre>
+<h4 id="扩展的关系代数运算"><a href="#扩展的关系代数运算" class="headerlink" title="扩展的关系代数运算"></a>扩展的关系代数运算</h4><pre><code class="hljs">  连接⋈：先笛卡尔积再筛选
+  等值连接：使用=筛选
+  自然连接：自动找同名属性、自动相等、自动去重
+  θ连接：条件连接，&gt;&lt;!=等等
+  交∩：共同部分
+  除÷：全部满足的查询，R÷S表达，对于S中的每个值，在R中都能找到对应关系的集合
+  广义投影：可以计算的投影π(工资*12)(Employee)
+  外连接：保留普通连接中没有匹配上的元组。左右外连接分别表示保留左表右表。全外连接保留全部
+</code></pre>
+<h3 id="关系数据库SQL语言简介"><a href="#关系数据库SQL语言简介" class="headerlink" title="关系数据库SQL语言简介"></a>关系数据库SQL语言简介</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><pre><code class="hljs">  综合统一
+  高度非过程化
+  面向集合的操作方式
+  两种使用方式
+  语言简洁
+  支持三级模式
+</code></pre>
+<h4 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h4><pre><code class="hljs">  数据定义语言DDL：定义数据库结构。CREATE,ALTER,DROP
+  交互式数据操纵语言DML:操作数据。SELECT,INSERT,UODATE,DELETE
+  事务控制:保持数据一致性。COMMIT,ROLLBACK,SAVEPOINT
+  嵌入式SQL和动态SQL
+  完整性:保证数据合法。PRIMARY KEY,NOT NULL,CHECK,FOREIGN KEY
+  权限管理:控制访问权限。GRANT,REVOKE
+</code></pre>
+<h4 id="SQL数据定义"><a href="#SQL数据定义" class="headerlink" title="SQL数据定义"></a>SQL数据定义</h4><pre><code class="hljs">  创建表:CREATE TABLE
+  修改和删除表:ALTER TABLE STUDENT ADD score INT;DROP TABLE Student;
+  索引建立与删除:CREATE INDEX IDX_NAME ON STUDENT(name);DROP INDEX IDX_NAME
+  视图创建与删除:CREATE VIEW ;DROP VIEW;
+</code></pre>
+<h4 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h4><pre><code class="hljs">  SELECT 列名
+  FROM 表名
+  WHERE 条件;
+  简单查询
+  连接查询
+  子查询:
+  SELECT name
+  FROM Student
+  WHERE sid IN(
+  SELECT sid
+  FROM Score
+  WHERE score &gt; 90
+  );
+  聚集函数:
+  COUNT()计数
+  SUM()求和
+  AVG()平均值
+  MAX()最大值
+  MIN()最小值
+  分组查询：
+  GROUP BY
+  配合HAVING 使用
+  更名运算:
+  AS
+  字符串操作:
+  WHERE name LIKE &#39;张%&#39;
+  视图查询
+  去重：SELECT DISTINCT score
+  FROM Student;
+</code></pre>
+<h4 id="SQL数据更新"><a href="#SQL数据更新" class="headerlink" title="SQL数据更新"></a>SQL数据更新</h4><pre><code class="hljs">  插入:INSERT INTO Student
+  VALUES(1,&#39;张三&#39;，20);
+  删除:DELETE FROM Student
+  WHERE id=1;
+  修改:UPDATE Student
+  SET age =21
+  WHERE id =1;
+</code></pre>
+<h4 id="SQL访问控制"><a href="#SQL访问控制" class="headerlink" title="SQL访问控制"></a>SQL访问控制</h4><pre><code class="hljs">  授权:GRANT SELECT
+  ON Student
+  TO user1;
+  收回权限:REVOKE SELECT 
+  ON Student 
+  FROM user1;
+</code></pre>
+<h4 id="嵌入式SQL"><a href="#嵌入式SQL" class="headerlink" title="嵌入式SQL"></a>嵌入式SQL</h4><pre><code class="hljs">  SQL通信区:保存SQL执行结果信息，运行状态记录区
+  主变量:高级语言变量
+  游标SQL:
+  定义游标：
+  DECLARE c1 CURSOR FOR
+  SELECT name
+  FROM Student;
+  打开游标：
+  OPEN c1;
+  逐行读取：
+  FETCH c1 INTO :name;
+  关闭游标：
+  CLOSE c1;
+</code></pre>
+<h3 id="关系数据库规范化"><a href="#关系数据库规范化" class="headerlink" title="关系数据库规范化"></a>关系数据库规范化</h3><p>   减少数据冗余、防止数据异常，让数据结构更合理</p>
+<h4 id="数据依赖"><a href="#数据依赖" class="headerlink" title="数据依赖"></a>数据依赖</h4><pre><code class="hljs">  函数依赖：X-&gt;Y，X决定Y，知道X就能唯一确定Y
+  非平凡的函数依赖：如果Y不属于X，则X-&gt;Y，这是有实际意义的依赖
+  平凡的函数依赖:如果Y属于X，则X-&gt;Y，无实际意义
+  完全函数依赖：如果X-&gt;Y并且X的任何真子集都不能决定Y，则Y完全依赖X
+  部分函数依赖：如果X-&gt;Y,Y只依赖X的一部分
+  传递依赖：如果X-&gt;Y,Y-&gt;Z则X-&gt;Z
+  码：能唯一标识元组的属性集合
+  超码：能唯一标识记录
+  候选码：最小超码
+  全码：所有属性构成的候选码
+  主属性：属于候选码的属性
+  非主属性：不属于任何候选码的属性
+  外码：外键
+  函数依赖的公理系统：
+  自反律：Y ⊆ X，则X → Y
+  增广律：X → Y，则XZ → YZ
+  传递律：X → Y，Y → Z，则X → Z
+  合并规则：X-&gt;Y,X-&gt;Z,则X-&gt;YZ
+  伪传递律：X-&gt;Y,WY-&gt;Z,则WX-&gt;Z
+  分解规则：X-&gt;YZ,则X-&gt;Y,X-&gt;Z
+</code></pre>
+<h4 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h4><pre><code class="hljs">  范式越高，冗余越少，结构越合理
+  第一范式1NF，属性值必须不可再分
+  第二范式2NF，首先满足1NF，非主属性必须完全依赖主键
+  第三范式3NF，首先满足2NF，非主属性不能依赖另一个非主属性
+  BCNF,首先满足3NF，X-&gt;Y中，X必须是超码
+  第四范式，首先满足BCNF，一个X对应唯一Y，消除多值依赖
+  想达成范式通常需要拆表
+</code></pre>
+<h4 id="模式分解"><a href="#模式分解" class="headerlink" title="模式分解"></a>模式分解</h4><pre><code class="hljs">  分解：将原表拆成小表
+  无损连接：把拆分后的表重新连接后能够恢复原数据
+  保持函数依赖：分解后原有的函数依赖仍然能保持
+</code></pre>
+<h3 id="数据库控制功能"><a href="#数据库控制功能" class="headerlink" title="数据库控制功能"></a>数据库控制功能</h3><h4 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h4><pre><code class="hljs">  事务是一组要么全部成功、要么全部失败的数据库操作。
+  三条事务定义语句：
+     开始事务：BEGIN TRANSACTION;从现在开始，后面的SQL属于同一个事务
+     提交事务：COMMIT;表示事务执行成功，正式写入数据库
+     回滚事务：ROLLBACK;撤销事务已经做过的所有修改，恢复到事务开始前的状态
+  事务的ACID特征：
+     A：原子性。事务不可分割，要么全部执行，要么全部不执行
+     C：一致性。事务执行前后，数据必须保持正确状态
+     I：隔离性。多个事务互不干扰
+     D：持久性。事务提交后数据永久保存
+</code></pre>
+<h4 id="数据库备份与恢复"><a href="#数据库备份与恢复" class="headerlink" title="数据库备份与恢复"></a>数据库备份与恢复</h4><pre><code class="hljs">  故障类型：
+     事务故障：事务本身出错，使用回滚解决
+     系统故障：内存数据丢失但是外存数据存在
+     介质故障：磁盘损坏，用备份恢复
+  备份方法：
+     静态备份：备份时不允许用户操作数据库
+     动态备份：数据库运行时备份
+     海量转储：备份全部数据库
+     增量转储：只备份修改部分
+  恢复：使用日志和备份恢复数据库
+  数据库镜像：同时维护另一个数据库副本
+</code></pre>
+<h4 id="并发控制"><a href="#并发控制" class="headerlink" title="并发控制"></a>并发控制</h4><pre><code class="hljs">  并发操作问题：
+     丢失修改
+     不可重复读：同一事务中，两次读取结果不同
+     读脏数据：读取了未提交的数据
+  并发控制技术：
+     封锁：
+        共享锁S：可以读不能写，多个事务可以同时加S锁
+        排他锁X：能读能写，别人不能读不能写。同一时刻只能一个X锁
+     一级封锁协议：事务修改数据前必须加X锁，直到事务结束。可以解决丢失修改
+     二级封锁协议：在一级封锁协议的基础上，读数据前加S锁，读完立即释放。可以解决丢失修改和脏读
+     三级封锁协议：在二级封锁协议的基础上，S锁直到事务结束才释放，可以解决所有问题
+  活锁：事务没有阻塞但是永远抢不到资源
+  死锁：两个事务互相等待
+  并发调度的可串行性
+  两段封锁协议：把事务分成两段，第一段只能加锁不能解锁，第二段只能解锁不能加锁。保证并发调度可串行化
+  封锁粒度：
+     大粒度锁：锁整个表或者数据库
+     小粒度锁：锁某行数据
+     
+</code></pre>
+<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="基本概念-5"><a href="#基本概念-5" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="计算机网络功能"><a href="#计算机网络功能" class="headerlink" title="计算机网络功能"></a>计算机网络功能</h4><pre><code class="hljs">  数据通信
+  资源共享
+  负载均衡
+  高可靠性
+</code></pre>
+<h4 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h4><pre><code class="hljs">  局域网
+  城域网
+  广域网
+</code></pre>
+<h4 id="网络的拓扑结构"><a href="#网络的拓扑结构" class="headerlink" title="网络的拓扑结构"></a>网络的拓扑结构</h4><pre><code class="hljs">  总线型结构
+  星型结构
+  环型结构
+  树形结构
+  分布式结构
+</code></pre>
+<h4 id="ISO-OSI网络体系结构"><a href="#ISO-OSI网络体系结构" class="headerlink" title="ISO&#x2F;OSI网络体系结构"></a>ISO&#x2F;OSI网络体系结构</h4><pre><code class="hljs">  OSI7层模型：
+     应用层
+     表示层
+     会话层
+     传输层
+     网络层
+     数据链路层
+     物理层
+  模型的信息流向
+</code></pre>
+<h3 id="网络传输介质与交换技术"><a href="#网络传输介质与交换技术" class="headerlink" title="网络传输介质与交换技术"></a>网络传输介质与交换技术</h3><h4 id="网络互连设备"><a href="#网络互连设备" class="headerlink" title="网络互连设备"></a>网络互连设备</h4><pre><code class="hljs">  网络传输介质互连设备：
+     物理层的互连设备：
+        中继器
+        集线器
+     数据链路层的互连设备：
+        网桥
+        交换机
+     网络层互连设备：
+        路由器
+     应用层互连设备：
+        网关
+</code></pre>
+<h4 id="网络的传输介质"><a href="#网络的传输介质" class="headerlink" title="网络的传输介质"></a>网络的传输介质</h4><pre><code class="hljs">  有线介质：
+     双绞线
+     同轴电缆
+     光纤
+  无线介质：
+     微波
+     红外线
+     激光
+     卫星
+  组建网络：
+     服务器
+     客户端
+     网络设备
+     通信介质
+     网络软件
+</code></pre>
+<h3 id="局域网络连接"><a href="#局域网络连接" class="headerlink" title="局域网络连接"></a>局域网络连接</h3><h4 id="局域网基本组成"><a href="#局域网基本组成" class="headerlink" title="局域网基本组成"></a>局域网基本组成</h4><pre><code class="hljs">  网络服务器
+  网络工作站
+  网络适配器
+  传输介质
+</code></pre>
+<h4 id="LAN模型"><a href="#LAN模型" class="headerlink" title="LAN模型"></a>LAN模型</h4><pre><code class="hljs">  物理层
+  MAC
+  LLC
+</code></pre>
+<h4 id="以太网-IEEE-802-3"><a href="#以太网-IEEE-802-3" class="headerlink" title="以太网(IEEE 802.3)"></a>以太网(IEEE 802.3)</h4><pre><code class="hljs">  介质访问技术
+  IEEE 802.3——10Mbps以太网
+  IEEE 802.3u——100Mbps快速以太网
+  IEEE 802.3z——1000Mbps千兆以太网：
+     光纤系统
+     宽带同轴电缆系统
+     5类UTP电缆
+</code></pre>
+<h4 id="令牌环网-IEEE-802-5"><a href="#令牌环网-IEEE-802-5" class="headerlink" title="令牌环网(IEEE 802.5)"></a>令牌环网(IEEE 802.5)</h4><h4 id="FDDI"><a href="#FDDI" class="headerlink" title="FDDI"></a>FDDI</h4><h4 id="无线局域网-CSMA-CA"><a href="#无线局域网-CSMA-CA" class="headerlink" title="无线局域网(CSMA&#x2F;CA)"></a>无线局域网(CSMA&#x2F;CA)</h4><h3 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP&#x2F;IP协议"></a>TCP&#x2F;IP协议</h3><p>   特性：<br>      逻辑编址：为每台机器分配IP地址<br>      路由选择：决定数据怎么走<br>      域名解析：把网址转化成IP地址<br>      错误检测和流量控制<br>   TCP&#x2F;IP分层模型：<br>      应用层：HTTP、FTP、SMTP、DNS<br>      传输层：TCP、UDP<br>      网际层:IP、ICMP、ARP<br>      网络接口层:网卡、MAC、以太网<br>   网络接口层协议<br>   网际层协议IP<br>   ARP和RARP<br>   网际层协议ICMP<br>   传输层协议TCP<br>   传输层协议UDP<br>   应用层协议</p>
+<h3 id="协议体系结构"><a href="#协议体系结构" class="headerlink" title="协议体系结构"></a>协议体系结构</h3><h4 id="网络的标准"><a href="#网络的标准" class="headerlink" title="网络的标准"></a>网络的标准</h4><pre><code class="hljs">  电信标准：
+     ITU-R：无线通信标准
+     ITU-T：电信标准化
+     ITU-D：帮助发展中国家建设通信系统
+     V系列：电话线路数据通信标准
+     X系列：数据网络标准
+  国际标准：
+     ANSI美国国家标准组织：负责工业标准
+     NIST：信息安全与密码学、测试
+     IEEE：局域网标准，例如以太网802.3，wifi802.11,
+     EIA：负责电子设备接口标准
+  Internet标准：文档RFC，包含TCP,IP,HTTP
+</code></pre>
+<h4 id="广域网协议"><a href="#广域网协议" class="headerlink" title="广域网协议"></a>广域网协议</h4><pre><code class="hljs">  点对点协议PPP
+  数字用户线xDSL
+  数字专线
+  帧中继
+  异步传输模式
+  X.25协议
+</code></pre>
+<h3 id="Internet"><a href="#Internet" class="headerlink" title="Internet"></a>Internet</h3><h4 id="Internet地址"><a href="#Internet地址" class="headerlink" title="Internet地址"></a>Internet地址</h4><pre><code class="hljs">  域名
+  IP地址
+  NAT技术
+  IPv6：
+  格式地址表示
+</code></pre>
+<h4 id="Internet服务"><a href="#Internet服务" class="headerlink" title="Internet服务"></a>Internet服务</h4><pre><code class="hljs">  域名服务
+  远程登录服务
+  电子邮件服务
+  www万维网服务
+  文件传输服务
+</code></pre>
+<h3 id="计算机网络与信息安全"><a href="#计算机网络与信息安全" class="headerlink" title="计算机网络与信息安全"></a>计算机网络与信息安全</h3><h4 id="信息安全基础"><a href="#信息安全基础" class="headerlink" title="信息安全基础"></a>信息安全基础</h4><pre><code class="hljs">  五个要素：
+     机密性
+     完整性
+    可用性
+    可控性
+     可审查性
+  用户标识与验证：
+     人的物理特征
+     用户所拥有特殊安全物品识别
+  用户存取权限限制:
+     隔离控制法
+     限制权限法
+  系统安全监控
+  计算机病毒防治
+</code></pre>
+<h4 id="信息安全技术"><a href="#信息安全技术" class="headerlink" title="信息安全技术"></a>信息安全技术</h4><pre><code class="hljs">  保密通信模型
+  加密
+  解密
+  认证
+  数据签名
+  摘要
+</code></pre>
+<h4 id="计算机信息系统安全保护等级"><a href="#计算机信息系统安全保护等级" class="headerlink" title="计算机信息系统安全保护等级"></a>计算机信息系统安全保护等级</h4><pre><code class="hljs">  第一级
+  第二级
+  第三级
+  第四级
+  第五级
+</code></pre>
+<h4 id="网络安全技术"><a href="#网络安全技术" class="headerlink" title="网络安全技术"></a>网络安全技术</h4><pre><code class="hljs">  非授权访问
+  信息泄露丢失
+  破坏数据完整性
+  拒绝服务攻击
+  利用网络传播病毒
+</code></pre>
+<h4 id="网络安全控制技术"><a href="#网络安全控制技术" class="headerlink" title="网络安全控制技术"></a>网络安全控制技术</h4><pre><code class="hljs">  防火墙技术
+  加密技术
+  用户识别技术
+  访问控制技术
+  网络反病毒技术
+  网络安全漏洞扫描技术
+  入侵检测技术
+</code></pre>
+<h4 id="防火墙技术"><a href="#防火墙技术" class="headerlink" title="防火墙技术"></a>防火墙技术</h4><pre><code class="hljs">  包过滤防火墙
+  应用代理网关防火墙
+  状态检测技术防火墙
+</code></pre>
+<h4 id="入侵检测与防御"><a href="#入侵检测与防御" class="headerlink" title="入侵检测与防御"></a>入侵检测与防御</h4><h2 id="知识产权法律"><a href="#知识产权法律" class="headerlink" title="知识产权法律"></a>知识产权法律</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%BD%AF%E8%80%83/" class="print-no-link">#软考</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%B8%88/" class="print-no-link">#程序设计师</a>
+      
+        <a href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="print-no-link">#复习笔记</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>软考程序设计师 — 知识点整理</div>
+      <div>https://xiaolec05.github.io/2026/06/02/ruankao-program-designer-knowledge/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>陈晓乐</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年6月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/06/02/project-dsa-study/" title="GitHub 项目：C++ 数据结构与算法学习笔记">
+                        <span class="hidden-mobile">GitHub 项目：C++ 数据结构与算法学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'XiaoleC05/XiaoleC05.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'blog-comments');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"forest"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <span style="margin:0 .5rem;opacity:.6">|</span> <a href="/atom.xml" target="_blank" rel="noopener" title="RSS / Atom">RSS</a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+    expandAllToc();
+    bindTocToggle();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+        expandAllToc();
+        bindTocToggle();
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/home-banner-carousel.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

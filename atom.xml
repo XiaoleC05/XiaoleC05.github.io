@@ -10,7 +10,27 @@
   <rights>All rights reserved 2026, 陈晓乐</rights>
   <subtitle>技术 · 随笔 · 作品集</subtitle>
   <title>ChenXiaole</title>
-  <updated>2026-06-02T04:00:00.000Z</updated>
+  <updated>2026-06-02T06:00:00.000Z</updated>
+  <entry>
+    <author>
+      <name>陈晓乐</name>
+    </author>
+    <category term="技术笔记" scheme="https://xiaolec05.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="软考" scheme="https://xiaolec05.github.io/tags/%E8%BD%AF%E8%80%83/"/>
+    <category term="程序设计师" scheme="https://xiaolec05.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%B8%88/"/>
+    <category term="复习笔记" scheme="https://xiaolec05.github.io/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xiaolec05.github.io/2026/06/02/ruankao-program-designer-knowledge/</id>
+    <link href="https://xiaolec05.github.io/2026/06/02/ruankao-program-designer-knowledge/"/>
+    <published>2026-06-02T06:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文整理自个人软考复习笔记，覆盖程序设计师考试主要知识模块，便于检索与复习。</p>
+</blockquote>
+<h1 id="软考程序设计师"><a href="#软考程序设计师" class="headerlink" title="软考程序设]]>
+    </summary>
+    <title>软考程序设计师 — 知识点整理</title>
+    <updated>2026-06-02T06:00:00.000Z</updated>
+  </entry>
   <entry>
     <author>
       <name>陈晓乐</name>
