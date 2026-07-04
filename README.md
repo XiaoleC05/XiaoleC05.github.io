@@ -1,35 +1,58 @@
 # XiaoleC05.github.io
 
-> Personal tech blog & portfolio site of Xiaole Cheng.
+Personal tech blog and portfolio site of Xiaole Cheng, built with Hexo.
 
-## About
+## Features
 
-This is my personal website — a place where I write about software development, share project experiences, and document technical learnings. It also serves as a portfolio showcasing the tools and projects I've built.
+- Technical articles written in Markdown
+- Material Design responsive layout
+- Category and tag archives
 
-## Tech Stack
+## Architecture
 
-- **Framework**: [Hexo](https://hexo.io) — fast, Markdown-based static site generator
-- **Theme**: [Fluid](https://github.com/fluid-dev/hexo-theme-fluid) — Material Design style, responsive
-- **Hosting**: GitHub Pages
-- **Domain**: [xiaolec05.github.io](https://xiaolec05.github.io)
+```text
+Hexo (static site generator)
+  ↓
+Fluid Theme (Material Design)
+  ↓
+GitHub Pages (hosting)
+```
 
-## Content Focus
+## Directory Structure
 
-- Backend development with Go
-- Full-stack projects and architecture
-- Tool & platform development
-- Technical tutorials and best practices
+```text
+XiaoleC05.github.io/
+├── source/          # Markdown posts and pages
+│   └── _posts/      # blog articles
+├── themes/          # Fluid theme
+├── _config.yml      # site configuration
+├── README.md
+└── README_CN.md
+```
 
-## Related Projects
+## Requirements
 
-This site links to my main project platform [Oxelia51](https://oxelia51.com) and serves as a personal brand hub. All tools and projects I build are discoverable through either this site or Oxelia51.
+- Node.js 18+
+- npm
 
-## Author
+## Quick Start
 
-**Xiaole Cheng (程)** — Software developer focused on Go, full-stack web development, and building practical developer tools.
+```bash
+git clone https://github.com/XiaoleC05/XiaoleC05.github.io.git
+cd XiaoleC05.github.io
 
-- GitHub: [@XiaoleC05](https://github.com/XiaoleC05)
-- Platform: [oxelia51.com](https://oxelia51.com)
+npm install
+
+# local preview
+hexo server
+
+# generate static files
+hexo generate
+```
+
+## Usage
+
+Local preview at `http://localhost:4000`. Deployed at [xiaolec05.github.io](https://xiaolec05.github.io).
 
 ## License
 
